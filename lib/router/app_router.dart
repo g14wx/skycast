@@ -3,10 +3,7 @@ import 'package:flutter/material.dart';
 // packages
 import 'package:skycast/BloCs/default_bloc.dart';
 import 'package:skycast/features/root/root/landing_root.dart';
-import 'package:skycast/features/root/root_home/home_front/landing_home_front.dart';
 import 'package:skycast/features/root/root_home/root_home/wrapping_landing_root_home.dart';
-import 'package:skycast/features/root/root_home/second_front/landing_root_home_second_front.dart';
-import 'package:skycast/features/root/root_home/settings_front/landing_root_home_settings.dart';
 import 'package:skycast/features/root/root_login/login/landing_login.dart';
 import 'package:skycast/features/root/root_login/root_login/root_login_navigator.dart';
 import 'package:skycast/providers/default_provider/default_provider.dart';
@@ -21,6 +18,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 import 'package:skycast/router/providers/navigator_keys_provider.dart';
 import 'package:skycast/services/service_locator/service_locator_setup.dart';
+
+import '../features/root/root_home/sub_modules/home_front/landing_home_front.dart';
+import '../features/root/root_home/sub_modules/second_front/landing_root_home_second_front.dart';
+import '../features/root/root_home/sub_modules/settings_front/landing_root_home_settings.dart';
 
 class AppRouter {
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
