@@ -4,11 +4,7 @@ import 'package:skycast/constants/env.dart';
 import 'package:skycast/themes/protocols/i_custom_colors.dart';
 import 'package:skycast/themes/protocols/i_custom_colors_container.dart';
 
-@Injectable(as: ICustomColorsContainer, env: [
-  (Env.production),
-  (Env.staging),
-  (Env.local)
-])
+@Injectable(as: ICustomColorsContainer, env: [(Env.production), (Env.staging), (Env.local), (Env.test)])
 class CustomColorsContainerDefault implements ICustomColorsContainer {
   @override
   Color quaternary = const Color(0xFF00459B);

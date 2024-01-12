@@ -1,4 +1,5 @@
 import 'package:skycast/constants/env.dart';
+
 class EnvResolver {
   static String resolveEnv() {
     const envFromCLi = String.fromEnvironment("ENV");
@@ -10,6 +11,9 @@ class EnvResolver {
           break;
         case Env.staging:
           env = Env.staging;
+          break;
+        case Env.test:
+          env = Env.test;
           break;
       }
     }

@@ -56,6 +56,7 @@ dev_dependencies:
   riverpod_generator: ^2.3.9
   custom_lint: ^0.5.8
   riverpod_lint: ^2.3.7
+  mockito: 5.4.3
 
 flutter:
   uses-material-design: true
@@ -64,4 +65,32 @@ flutter:
 
   assets:
     - .env
+    # this is for make the test widget, found the Poppins fonts
+    - assets/fonts/poppins/
+    # this is for make the test widget, found the Lato fonts
+    - assets/fonts/lato/
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/poppins/Poppins-Light.ttf
+        - asset: assets/fonts/poppins/Poppins-Medium.ttf
+        - asset: assets/fonts/poppins/Poppins-Regular.ttf
+        - asset: assets/fonts/poppins/Poppins-Italic.ttf
+          style: italic
+
+    - family: Lato
+      fonts:
+        - asset: assets/fonts/lato/Lato-Light.ttf
+        - asset: assets/fonts/lato/Lato-Bold.ttf
+        - asset: assets/fonts/lato/Lato-Regular.ttf
+        - asset: assets/fonts/lato/Lato-Italic.ttf
+          style: italic
+
+    - family: Raleway
+      fonts:
+        - asset: assets/fonts/raleway/Raleway-Light.ttf
+        - asset: assets/fonts/raleway/Raleway-Bold.ttf
+        - asset: assets/fonts/raleway/Raleway-Regular.ttf
+        - asset: assets/fonts/raleway/Raleway-Italic.ttf
+          style: italic
 

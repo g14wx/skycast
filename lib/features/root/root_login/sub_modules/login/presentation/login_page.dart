@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:skycast/router/constants/navigator_keys.dart';
+import 'package:skycast/shared/hooks/use_app_translations.dart';
 import 'package:skycast/shared/ui/app_bar/app_bar.dart';
 
 class LoginPage extends HookConsumerWidget {
@@ -8,9 +9,10 @@ class LoginPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final localizations = useAppTranslation(context)!;
     return Scaffold(
       appBar: BaseAppBar(
-        title: Text("Login"),
+        title: Text(localizations.login),
         appBar: AppBar(),
         showLoginButton: false,
         leading: IconButton(
@@ -24,7 +26,7 @@ class LoginPage extends HookConsumerWidget {
           },
         ),
       ),
-      body: Center(
+      body: const Center(
         child: Text("Login Form"),
       ),
     );

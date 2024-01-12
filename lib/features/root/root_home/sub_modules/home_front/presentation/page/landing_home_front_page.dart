@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:skycast/shared/hooks/use_app_translations.dart';
 import 'package:skycast/shared/ui/app_bar/app_bar.dart';
 
 class LandingHomeFrontPage extends HookConsumerWidget {
@@ -7,10 +8,10 @@ class LandingHomeFrontPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final translations = useAppTranslation(context)!;
     return Scaffold(
       appBar: BaseAppBar(
-        title: Text(""),
-        leading: Icon(Icons.web, size: 10,),
+        title: Text(translations.dashboard),
         appBar: AppBar(),
       ),
       body: const Center(

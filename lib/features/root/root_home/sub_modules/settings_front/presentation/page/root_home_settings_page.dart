@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 class RootHomeSettingsPage extends StatelessWidget {
-  const RootHomeSettingsPage({Key? key}) : super(key: key);
+  const RootHomeSettingsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
         child: Text("Settings front"),
       ),

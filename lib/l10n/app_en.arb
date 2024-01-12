@@ -1,5 +1,8 @@
 {
+  "dashboard": "Dashboard",
   "welcome": "Welcome",
+  "subtitleApp": "Looking for a little breeze?",
+  "login": "Login",
   "hello": "Hello",
   "changeLanguageTo": "Change language to",
   "changeThemeTo": "Change theme to",

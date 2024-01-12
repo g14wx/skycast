@@ -4,10 +4,9 @@ import 'package:flutter/material.dart';
 class NestedScreen extends StatelessWidget {
   final GlobalKey<NavigatorState> _navigatorKey;
   final Function _onGenerateRoute;
-  const NestedScreen({Key? key, required GlobalKey<NavigatorState> navigatorKey, required Function onGenerateRoute})
+  const NestedScreen({super.key, required GlobalKey<NavigatorState> navigatorKey, required Function onGenerateRoute})
       : _navigatorKey = navigatorKey,
-        _onGenerateRoute = onGenerateRoute,
-        super(key: key);
+        _onGenerateRoute = onGenerateRoute;
 
   @override
   Widget build(BuildContext context) {

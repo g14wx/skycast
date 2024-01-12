@@ -64,8 +64,8 @@ mixin ResponsiveFunctionsMixin {
   ResponsiveRowColumnItem buildSpaceBetweenCells(BuildContext context) {
     return buildComponentCell(
         context: context,
-        child: Visibility(
-          child: const SizedBox(
+        child: const Visibility(
+          child: SizedBox(
             height: 10,
             width: 10,
           ),

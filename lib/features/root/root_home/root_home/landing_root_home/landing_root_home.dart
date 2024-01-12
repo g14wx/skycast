@@ -33,6 +33,7 @@ class LandingRootHome extends HookConsumerWidget with NestedNavigationFunctionsM
     ];
 
     return original_provider.Consumer<NavigatorKeysProvider>(
+      // ignore: deprecated_member_use
       builder: (context, navigatorKeysProvider, child) => WillPopScope(
           onWillPop: () async {
             /* we use onWillPop, due to that when you try to get back in a nested navigator, for example in dashboard page, and you press the back button of the device
@@ -60,7 +61,6 @@ class LandingRootHome extends HookConsumerWidget with NestedNavigationFunctionsM
             body: !(ResponsiveBreakpoints.of(context).isMobile || ResponsiveBreakpoints.of(context).isTablet)
                 ? Row(
                     children: [
-                      /// Pretty similar to the BottomNavigationBar!
                       SideNavigationBar(
                         theme: SideNavigationBarTheme(
                             dividerTheme: const SideNavigationBarDividerTheme(
@@ -70,14 +70,18 @@ class LandingRootHome extends HookConsumerWidget with NestedNavigationFunctionsM
                                 showMainDivider: true,
                                 showFooterDivider: true),
                             itemTheme: SideNavigationBarItemTheme(
-                                labelTextStyle: GoogleFonts.raleway(color: Theme.of(context).textTheme.labelMedium?.color)),
+                                labelTextStyle:
+                                    GoogleFonts.raleway(color: Theme.of(context).textTheme.labelMedium?.color)),
                             togglerTheme: const SideNavigationBarTogglerTheme()),
-                        header: const SideNavigationBarHeader(title: Text("SkyCast"), image: Icon(Icons.abc), subtitle: Text("Looking for a wind?")),
+                        header: SideNavigationBarHeader(
+                            title: const Text("SkyCast"),
+                            image: Container(),
+                            subtitle: Text(localizations.subtitleApp)),
                         selectedIndex: navigatorKeysProvider.selectedIndexDrawer,
                         items: [
                           SideNavigationBarItem(
                             icon: Icons.home,
-                            label: localizations!.home,
+                            label: localizations.home,
                           ),
                           SideNavigationBarItem(
                             icon: Icons.pages,
@@ -89,12 +93,10 @@ class LandingRootHome extends HookConsumerWidget with NestedNavigationFunctionsM
                           ),
                         ],
                         onTap: (value) => onItemTapped(value, context),
-                        toggler: SideBarToggler(
-                            expandIcon: Icons.keyboard_arrow_left,
-                            shrinkIcon: Icons.keyboard_arrow_right,
-                            onToggle: () {
-                              print('Toggle');
-                            }),
+                        toggler: const SideBarToggler(
+                          expandIcon: Icons.keyboard_arrow_left,
+                          shrinkIcon: Icons.keyboard_arrow_right,
+                        ),
                       ),
 
                       /// Make it take the rest of the available width
@@ -110,30 +112,32 @@ class LandingRootHome extends HookConsumerWidget with NestedNavigationFunctionsM
                     index: navigatorKeysProvider.selectedIndexDrawer,
                     children: nestedPages,
                   ),
-            bottomNavigationBar: !(ResponsiveBreakpoints.of(context).isMobile || ResponsiveBreakpoints.of(context).isTablet)
-                ? null
-                : BottomNavigationBar(
-                    backgroundColor: _getBackgroundColorBottomNavigationBar(navigatorKeysProvider.selectedIndexDrawer, context),
-                    selectedLabelStyle: GoogleFonts.lato(color: Colors.white, fontWeight: FontWeight.bold),
-                    selectedIconTheme: const IconThemeData(color: Colors.white),
-                    items: <BottomNavigationBarItem>[
-                      BottomNavigationBarItem(
-                        icon: const Icon(Icons.home),
-                        label: localizations!.home,
+            bottomNavigationBar:
+                !(ResponsiveBreakpoints.of(context).isMobile || ResponsiveBreakpoints.of(context).isTablet)
+                    ? null
+                    : BottomNavigationBar(
+                        backgroundColor:
+                            _getBackgroundColorBottomNavigationBar(navigatorKeysProvider.selectedIndexDrawer, context),
+                        selectedLabelStyle: GoogleFonts.lato(color: Colors.white, fontWeight: FontWeight.bold),
+                        selectedIconTheme: const IconThemeData(color: Colors.white),
+                        items: <BottomNavigationBarItem>[
+                          BottomNavigationBarItem(
+                            icon: const Icon(Icons.home),
+                            label: localizations.home,
+                          ),
+                          BottomNavigationBarItem(
+                            icon: const Icon(Icons.pages),
+                            label: localizations.second,
+                          ),
+                          BottomNavigationBarItem(
+                            icon: const Icon(Icons.settings),
+                            label: localizations.settings,
+                          ),
+                        ],
+                        currentIndex: navigatorKeysProvider.selectedIndexDrawer,
+                        selectedItemColor: Colors.white,
+                        onTap: (value) => onItemTapped(value, context),
                       ),
-                      BottomNavigationBarItem(
-                        icon: const Icon(Icons.pages),
-                        label: localizations.second,
-                      ),
-                      BottomNavigationBarItem(
-                        icon: const Icon(Icons.settings),
-                        label: localizations.settings,
-                      ),
-                    ],
-                    currentIndex: navigatorKeysProvider.selectedIndexDrawer,
-                    selectedItemColor: Colors.white,
-                    onTap: (value) => onItemTapped(value, context),
-                  ),
           )),
     );
   }

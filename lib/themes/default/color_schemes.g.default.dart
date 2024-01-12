@@ -3,11 +3,7 @@ import 'package:skycast/themes/protocols/i_color_schema.dart';
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 
-@Injectable(as: IColorSchema, env: [
-  (Env.production),
-  (Env.staging),
-  (Env.local)
-])
+@Injectable(as: IColorSchema, env: [(Env.production), (Env.staging), (Env.local), (Env.test)])
 class ColorSchemaDefault implements IColorSchema {
   @override
   ColorScheme lightColorScheme = const ColorScheme(

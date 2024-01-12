@@ -15,8 +15,6 @@ class BaseAppBar extends HookConsumerWidget implements PreferredSizeWidget {
   var appBarColor = useState(Colors.transparent);
   final bool showLoginButton;
 
-
-
   /// you can add more fields that meet your needs
 
   BaseAppBar(
@@ -28,16 +26,10 @@ class BaseAppBar extends HookConsumerWidget implements PreferredSizeWidget {
       toolbarHeight: 300,
       backgroundColor: appBarColor.value,
       title: title,
-      actions: [
-        ...?widgets,
-        const ButtonSettings(),
-        if (showLoginButton)
-        const ButtonLogin()
-      ],
-      leading: leading,
+      actions: [...?widgets, const ButtonSettings(), if (showLoginButton) const ButtonLogin()],
+      leading: leading ?? const Icon(Icons.cloud),
     );
   }
-
 
   @override
   Size get preferredSize => Size.fromHeight(appBar.preferredSize.height + appBarHeight.value);

@@ -6,16 +6,16 @@ class RootNestedScreen extends StatelessWidget {
   final Function _onGenerateRoute;
   final Future<bool> Function(BuildContext context) onExitPageNestedNavigation;
   const RootNestedScreen(
-      {Key? key,
+      {super.key,
       required GlobalKey<NavigatorState> navigatorKey,
       required Function onGenerateRoute,
       required this.onExitPageNestedNavigation})
       : _navigatorKey = navigatorKey,
-        _onGenerateRoute = onGenerateRoute,
-        super(key: key);
+        _onGenerateRoute = onGenerateRoute;
 
   @override
   Widget build(BuildContext context) {
+    // ignore: deprecated_member_use
     return WillPopScope(
       onWillPop: () async {
         debugPrint("Wants to pop");

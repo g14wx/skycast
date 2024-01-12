@@ -1,6 +1,9 @@
 {
+  "dashboard": "Inicio",
   "welcome": "Bienvenido",
   "hello": "Hola",
+  "subtitleApp": "¿Buscas un poco de brisa?",
+  "login": "Inicio de sesión",
   "changeLanguageTo": "Cambiar lenguaje a",
   "changeThemeTo": "Cambiar tema a",
   "light": "Claro",

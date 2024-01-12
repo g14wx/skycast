@@ -38,10 +38,7 @@ class MyApp extends StatelessWidget {
           fontSize: 72,
           fontWeight: FontWeight.bold,
         ),
-        titleLarge: GoogleFonts.poppins(
-          fontSize: 30,
-          fontStyle: FontStyle.italic,
-        ),
+        titleLarge: GoogleFonts.raleway(fontSize: 25),
         titleMedium: GoogleFonts.poppins(fontSize: 20, fontWeight: FontWeight.bold),
         titleSmall: GoogleFonts.poppins(fontSize: 15, fontWeight: FontWeight.bold),
         bodyLarge: GoogleFonts.poppins(fontSize: 15),
@@ -79,11 +76,11 @@ class MyApp extends StatelessWidget {
                 debugShowCheckedModeBanner: false,
                 navigatorKey: navigatorKeysProvider.navigationDefault,
                 builder: (context, widget) => ResponsiveBreakpoints.builder(breakpoints: const [
-                  Breakpoint(start: 0, end: 450, name: MOBILE),
-                  Breakpoint(start: 451, end: 600, name: TABLET),
-                  Breakpoint(start: 6001, end: 1024, name: DESKTOP),
-                  Breakpoint(start: 1025, end: double.infinity, name: '4K'),
-                ], child: widget!),
+                      Breakpoint(start: 0, end: 450, name: MOBILE),
+                      Breakpoint(start: 451, end: 600, name: TABLET),
+                      Breakpoint(start: 6001, end: 1024, name: DESKTOP),
+                      Breakpoint(start: 1025, end: double.infinity, name: '4K'),
+                    ], child: widget!),
                 localizationsDelegates: AppLocalizations.localizationsDelegates,
                 supportedLocales: AppLocalizations.supportedLocales,
                 theme: ThemeData(
