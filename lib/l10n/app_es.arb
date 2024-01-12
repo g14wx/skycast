@@ -1,0 +1,19 @@
+{
+  "welcome": "Bienvenido",
+  "hello": "Hola",
+  "changeLanguageTo": "Cambiar lenguaje a",
+  "changeThemeTo": "Cambiar tema a",
+  "light": "Claro",
+  "dark": "Oscuro",
+  "spanish": "Español",
+  "english": "Ingles",
+  "home": "Inicio",
+  "second": "Segunda",
+  "settings": "Configuraciones",
+  "closeApp": "Cerrar App",
+  "closeAppDescription": "Desea cerrar App",
+  "yes": "Si",
+  "no": "No",
+  "exitConfirmation": "Deseas salir",
+  "doYouWantToExit": "Enserio deseas salir"
+}

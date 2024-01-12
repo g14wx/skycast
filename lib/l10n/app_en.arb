@@ -1,0 +1,19 @@
+{
+  "welcome": "Welcome",
+  "hello": "Hello",
+  "changeLanguageTo": "Change language to",
+  "changeThemeTo": "Change theme to",
+  "light": "Light",
+  "dark": "Dark",
+  "spanish": "Spanish",
+  "english": "English",
+  "home": "Home",
+  "settings": "Settings",
+  "second": "Second",
+  "closeApp": "Close App",
+  "closeAppDescription": "Did you wish to close the app",
+  "yes": "Si",
+  "no": "No",
+  "exitConfirmation": "Exit on confirmation",
+  "doYouWantToExit": "Do you want to exit"
+}
