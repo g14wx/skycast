@@ -7,5 +7,4 @@ import 'package:skycast/services/env_variables_service/protocol/i_env_variables_
 class EnvVariablesService implements IEnvVariablesService {
   @override
   String? env = dotenv.env[EnvVariables.env];
-
 }

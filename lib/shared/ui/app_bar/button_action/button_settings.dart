@@ -21,8 +21,8 @@ class ButtonSettings extends HookConsumerWidget {
       ),
       icon: Container(
         padding: const EdgeInsets.all(7),
-        decoration:
-            BoxDecoration(color: Theme.of(context).primaryColor, borderRadius: const BorderRadius.all(Radius.circular(50))),
+        decoration: BoxDecoration(
+            color: Theme.of(context).primaryColor, borderRadius: const BorderRadius.all(Radius.circular(50))),
         child: const Center(
             child: Icon(
           Icons.settings,

@@ -10,15 +10,20 @@ class ButtonLogin extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(right: 10),
-      decoration:
-      BoxDecoration(color: Theme.of(context).primaryColor, borderRadius: const BorderRadius.all(Radius.circular(50))),
-      child: IconButton(onPressed: () {
-        final navigatorKeys =
-            original_provider.Provider.of<NavigatorKeysProvider>(context, listen: false).navigationDefault;
-        if (navigatorKeys.currentContext != null) {
-          Navigator.of(navigatorKeys.currentContext!).pushNamed(AppRoutes.rootLogin);
-        }
-      }, icon: const Icon(Icons.login, color: Colors.white,)),
+      decoration: BoxDecoration(
+          color: Theme.of(context).primaryColor, borderRadius: const BorderRadius.all(Radius.circular(50))),
+      child: IconButton(
+          onPressed: () {
+            final navigatorKeys =
+                original_provider.Provider.of<NavigatorKeysProvider>(context, listen: false).navigationDefault;
+            if (navigatorKeys.currentContext != null) {
+              Navigator.of(navigatorKeys.currentContext!).pushNamed(AppRoutes.rootLogin);
+            }
+          },
+          icon: const Icon(
+            Icons.login,
+            color: Colors.white,
+          )),
     );
   }
 }

@@ -10,8 +10,7 @@ class RootPage extends HookConsumerWidget {
   const RootPage({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref ) {
-
+  Widget build(BuildContext context, WidgetRef ref) {
     useEffect(() {
       Future.delayed(const Duration(seconds: 2)).then((value) {
         Navigator.of(context).pushReplacementNamed(AppRoutes.rootHome);
@@ -21,14 +20,13 @@ class RootPage extends HookConsumerWidget {
 
     final translations = useAppTranslation(context)!;
     return Scaffold(
-      body: Center(
-        child: AnimatedTextKit(repeatForever: false, isRepeatingAnimation: false, animatedTexts: [
-          FlickerAnimatedText(
-            translations.welcome,
-            textStyle: GoogleFonts.raleway(fontSize: 50),
-          ),
-        ]),
-      )
-    );
+        body: Center(
+      child: AnimatedTextKit(repeatForever: false, isRepeatingAnimation: false, animatedTexts: [
+        FlickerAnimatedText(
+          translations.welcome,
+          textStyle: GoogleFonts.raleway(fontSize: 50),
+        ),
+      ]),
+    ));
   }
 }
