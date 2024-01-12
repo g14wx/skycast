@@ -1,18 +1,11 @@
 import 'package:flutter/material.dart';
 
-// packages
 import 'package:skycast/BloCs/default_bloc.dart';
 import 'package:skycast/features/root/root/landing_root.dart';
 import 'package:skycast/features/root/root_home/root_home/wrapping_landing_root_home.dart';
-import 'package:skycast/features/root/root_login/login/landing_login.dart';
 import 'package:skycast/features/root/root_login/root_login/root_login_navigator.dart';
 import 'package:skycast/providers/default_provider/default_provider.dart';
 
-// blocs
-
-// pages
-
-// constants
 import 'package:skycast/router/constants/app_routes.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
@@ -22,6 +15,7 @@ import 'package:skycast/services/service_locator/service_locator_setup.dart';
 import '../features/root/root_home/sub_modules/home_front/landing_home_front.dart';
 import '../features/root/root_home/sub_modules/second_front/landing_root_home_second_front.dart';
 import '../features/root/root_home/sub_modules/settings_front/landing_root_home_settings.dart';
+import '../features/root/root_login/sub_modules/login/landing_login.dart';
 
 class AppRouter {
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
@@ -150,7 +144,7 @@ class AppRouter {
       default:
         return MaterialPageRoute(
           builder: (context) {
-            return const Text('not found on dashboard routes');
+            return const Text('not found on settings routes');
           },
         );
     }
@@ -173,7 +167,7 @@ class AppRouter {
           builder: (context) {
             return const Scaffold(
               body: Center(
-                child: Text('not found on dashboard routes'),
+                child: Text('not found on second routes'),
               ),
             );
           },
@@ -198,44 +192,13 @@ class AppRouter {
             );
           },
         );
-/*
-      case AppRoutes.root_checkout_user_details_form:
-        return MaterialPageRoute(
-          builder: (context) {
-            return UserDetailPage();
-          },
-        );
 
-      case AppRoutes.root_checkout_order_details_form:
-        return MaterialPageRoute(
-          builder: (context) {
-            return MultiProvider(
-              providers: [
-                ListenableProvider(create: (context) => getIt<SavedDeliveryPositionsProvider>()),
-                ListenableProvider(
-                  create: (context) => getIt<ShoppingCartProvider>(),
-                )
-              ],
-              child: MultiBlocProvider(
-                providers: [
-                  BlocProvider(
-                    create: (_) => getIt<SearchDirectionsCubit>(),
-                  ),
-                  BlocProvider(
-                    create: (_) => getIt<CheckoutGuidedCubit>(),
-                  )
-                ],
-                child: OrderDetailsPage(),
-              ),
-            );
-          },
-        ); */
       default:
         return MaterialPageRoute(
           builder: (context) {
             return const Scaffold(
               body: Center(
-                child: Text('not found on checkout routes'),
+                child: Text('not found on login routes'),
               ),
             );
           },

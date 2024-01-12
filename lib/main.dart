@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:skycast/app.dart';
 import 'package:skycast/constants/env.dart';
-import 'package:skycast/helpers/env_resolver.dart';
 
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';

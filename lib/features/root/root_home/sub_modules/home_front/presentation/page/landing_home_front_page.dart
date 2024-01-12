@@ -1,26 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:skycast/router/constants/app_routes.dart';
-import 'package:skycast/router/providers/navigator_keys_provider.dart';
-import 'package:skycast/shared/ui/app_bar/button_action/button_settings.dart';
-import 'package:provider/provider.dart' as original_provider;
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:skycast/shared/ui/app_bar/app_bar.dart';
 
-class LandingHomeFrontPage extends StatelessWidget {
+class LandingHomeFrontPage extends HookConsumerWidget {
   const LandingHomeFrontPage({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
-      appBar: AppBar(
-        actions: [
-          const ButtonSettings(),
-          IconButton(onPressed: () {
-            final navigatorKeys =
-                original_provider.Provider.of<NavigatorKeysProvider>(context, listen: false).navigationDefault;
-            if (navigatorKeys.currentContext != null) {
-              Navigator.of(navigatorKeys.currentContext!).pushNamed(AppRoutes.rootLogin);
-            }
-          }, icon: const Icon(Icons.login))
-        ],
+      appBar: BaseAppBar(
+        title: Text(""),
+        leading: Icon(Icons.web, size: 10,),
+        appBar: AppBar(),
       ),
       body: const Center(
         child: Text("Landing Home Front Page"),
