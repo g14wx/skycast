@@ -63,6 +63,8 @@ dev_dependencies:
   custom_lint: ^0.5.8
   riverpod_lint: ^2.3.7
   mockito: 5.4.3
+  flutter_native_splash: ^2.3.9
+  flutter_launcher_icons: ^0.13.1
 
 flutter:
   uses-material-design: true
@@ -78,6 +80,7 @@ flutter:
     - assets/lottie/loading/
     - assets/lottie/success/
     - assets/lottie/error/
+    -  assets/splash/skycast512.png
   fonts:
     - family: Poppins
       fonts:
