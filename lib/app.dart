@@ -96,7 +96,7 @@ class MyApp extends StatelessWidget {
                 onGenerateRoute: (settings) => AppRouter.onGenerateRoute(settings),
                 locale: Locale(appSettingsProvider.language),
                 themeMode: appSettingsProvider.isDarkTheme ? ThemeMode.dark : ThemeMode.light,
-                title: "");
+                title: "Skycast");
           }),
         );
       },

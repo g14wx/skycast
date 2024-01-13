@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>781967842563-7r4c9es16tu5gk1mf8nmtqbsqlbm42es.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.781967842563-7r4c9es16tu5gk1mf8nmtqbsqlbm42es</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>781967842563-1kr611p60d9n32j828a4o8les120kfmn.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBTgbA7VRiPRl7TWDucX6xw4z8WJZZo6yo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>781967842563</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.skycast.skycast</string>
+	<key>PROJECT_ID</key>
+	<string>skycast-d1d93</string>
+	<key>STORAGE_BUCKET</key>
+	<string>skycast-d1d93.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:781967842563:ios:8f28a276e631bbda9c1d36</string>
+</dict>
+</plist>
