@@ -72,7 +72,7 @@ flutter:
   generate: true
 
   assets:
-    - .env
+    - env
     # this is for make the test widget, found the Poppins fonts
     - assets/fonts/poppins/
     # this is for make the test widget, found the Lato fonts
