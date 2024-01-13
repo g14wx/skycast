@@ -18,5 +18,12 @@
   "yes": "Si",
   "no": "No",
   "exitConfirmation": "Deseas salir",
-  "doYouWantToExit": "Enserio deseas salir"
+  "doYouWantToExit": "Enserio deseas salir",
+  "loginWithGoogle": "Iniciar sesion con google",
+  "pickAUser": "Elige un usuario para poder continuar",
+  "youAreAlreadyLoggedIn": "Ya haz iniciado sesión",
+  "logout": "cerrar sesión",
+  "name": "Nombre",
+  "email": "Correo",
+  "phoneNumber": "Telefono"
 }

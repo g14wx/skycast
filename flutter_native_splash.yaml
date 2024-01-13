@@ -1,0 +1,7 @@
+flutter_native_splash:
+
+  color: "#ffffff"
+  image: assets/splash/skycast512.png
+  android_12:
+    image: assets/splash/skycast512.png
+    icon_background_color: "#ffffff"

@@ -18,5 +18,12 @@
   "yes": "Si",
   "no": "No",
   "exitConfirmation": "Exit on confirmation",
-  "doYouWantToExit": "Do you want to exit"
+  "doYouWantToExit": "Do you want to exit",
+  "loginWithGoogle": "Login With Google",
+  "pickAUser": "Pick a user to continue please!",
+  "youAreAlreadyLoggedIn": "You are already logged in",
+  "logout": "Logout",
+  "name": "Name",
+  "email": "Email",
+  "phoneNumber": "Phone number"
 }

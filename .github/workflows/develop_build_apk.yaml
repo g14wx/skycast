@@ -1,0 +1,41 @@
+on:
+  push:
+    branches:
+      - main
+      - master
+name: "🚀 📱 Build & Release"
+jobs:
+  build:
+    name: Build & Release
+    env:
+      weather_api_key: ${{secrets.WEATHER_API_KEY}}
+    runs-on: ubuntu-latest #macos-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: 'Create env file'
+        run: |
+          touch env &&
+          echo ENV=production >> env &&
+          echo API_KEY=${{env.weather_api_key}} >> env &&
+          echo BASE_URL_WEATHER=https://api.weatherapi.com/v1 >> env &&
+          echo PATH_FORECAST=/forecast.json >> env &&
+          cat env
+      - uses: actions/setup-java@v1
+        with:
+          java-version: '12.x'
+      - uses: subosito/flutter-action@v1
+        with:
+          flutter-version: '3.16.4'
+      - run: flutter pub get
+      - run: |
+          echo "${{secrets.RELEASE_KEY_STORE}}" > release.keystore.asc
+          gpg -d --passphrase "${{secrets.RELEASE_KEY_STORE_PARAPHRASE}}" --batch release.keystore.asc > android/app/skycastApp.jks
+      - run: dart run flutter_native_splash:create
+      - run: flutter build apk --dart-define=ENV=production -t lib/main.dart
+
+      - name: Push to Releases
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "build/app/outputs/apk/release/*"
+          tag: skycast.${{ github.run_number }}
+          token: ${{ secrets.PAT }}

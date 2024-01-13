@@ -1,0 +1,4 @@
+storePassword=skycast
+keyPassword=skycast
+keyAlias=skycast
+storeFile=./skycastApp.jks
