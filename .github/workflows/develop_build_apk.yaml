@@ -21,7 +21,6 @@ jobs:
           echo BASE_URL_WEATHER=https://api.weatherapi.com/v1 >> .env &&
           echo PATH_FORECAST=/forecast.json >> .env &&
           cat .env
-      - uses: actions/checkout@v1
       - uses: actions/setup-java@v1
         with:
           java-version: '12.x'
