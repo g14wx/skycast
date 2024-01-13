@@ -9,15 +9,25 @@ jobs:
     name: 🚀 Build Web on develop
     env:
       my_secret: ${{secrets.PAT}}
+      weather_api_key: ${{secrets.WEATHER_API_KEY}}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+      - name: 'Create env file'
+        run: |
+          touch .env &&
+          echo ENV=production >> .env &&
+          echo API_KEY=${{env.weather_api_key}} >> .env &&
+          echo BASE_URL_WEATHER=https://api.weatherapi.com/v1 >> .env &&
+          echo PATH_FORECAST=/forecast.json >> .env &&
+          cat .env
+
       - uses: subosito/flutter-action@v1
         with:
           flutter-version: '3.16.4'
       - run: flutter config --enable-web
       - run: flutter pub get
-      - run: flutter build web --release
+      - run: flutter build web --release --base-href=/skycast/
       - run: |
           cd build/web
           git init
