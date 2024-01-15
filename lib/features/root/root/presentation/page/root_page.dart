@@ -1,10 +1,11 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:skycast/router/constants/app_routes.dart';
-import 'package:skycast/shared/hooks/use_app_translations.dart';
+import 'package:skycast/features/root/root/BloCs/weather_setup_bloc/weather_setup_bloc.dart';
+import 'package:skycast/features/root/root/presentation/screens/failed_setup_screen.dart';
+import 'package:skycast/features/root/root/presentation/screens/loading_setup_screen.dart';
+import 'package:skycast/features/root/root/presentation/screens/success_setup_screen.dart';
 
 class RootPage extends HookConsumerWidget {
   const RootPage({super.key});
@@ -12,21 +13,28 @@ class RootPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     useEffect(() {
-      Future.delayed(const Duration(seconds: 2)).then((value) {
-        Navigator.of(context).pushReplacementNamed(AppRoutes.rootHome);
-      });
+      BlocProvider.of<WeatherSetupBloc>(context).add(const WeatherSetupEvent.getConditionTranslationsList());
       return null;
     }, []);
 
-    final translations = useAppTranslation(context)!;
     return Scaffold(
-        body: Center(
-      child: AnimatedTextKit(repeatForever: false, isRepeatingAnimation: false, animatedTexts: [
-        FlickerAnimatedText(
-          translations.welcome,
-          textStyle: GoogleFonts.raleway(fontSize: 50),
-        ),
-      ]),
+        body: BlocConsumer<WeatherSetupBloc, WeatherSetupState>(
+      builder: (context, state) {
+        return state.map(
+          loading: (value) {
+            return const LoadingSetupScreen();
+          },
+          success: (value) {
+            return const SuccessSetupScreen();
+          },
+          failed: (value) {
+            return FailedSetupScreen(
+              msg: value.failedMsg,
+            );
+          },
+        );
+      },
+      listener: (context, state) {},
     ));
   }
 }
