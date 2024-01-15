@@ -10,7 +10,7 @@ class NavigatorKeysProvider extends ChangeNotifier {
   // root navigation keys
   final GlobalKey<NavigatorState> navigationHome = NavigatorKeys.navigationHome;
   final GlobalKey<NavigatorState> navigationSecond = NavigatorKeys.navigationSecond;
-  final GlobalKey<NavigatorState> navigationSettings = NavigatorKeys.navigationSettings;
+  final GlobalKey<NavigatorState> navigationSettings = NavigatorKeys.navigationInfo;
   // this is not final due to it will be replaced everytime that the user changes the bottom item
   late GlobalKey<NavigatorState> currentNavigationKey;
   NavigatorKeysProvider() {

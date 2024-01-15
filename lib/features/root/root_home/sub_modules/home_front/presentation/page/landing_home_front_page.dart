@@ -8,12 +8,8 @@ import 'package:skycast/constants/assets.dart';
 import 'package:skycast/features/root/root_home/sub_modules/home_front/BloCs/get_weather_bloc/get_weather_bloc.dart';
 import 'package:skycast/features/root/root_home/sub_modules/home_front/presentation/page/widgets/success_tile.dart';
 import 'package:skycast/features/root/root_home/sub_modules/home_front/presentation/widgets/sliver_app_bar_home.dart';
-import 'package:skycast/providers/weather_provider/weather_storage_manager/protocols/i_weather_provider.dart';
-import 'package:skycast/services/service_locator/service_locator_setup.dart';
 import 'package:skycast/shared/hooks/use_app_translations.dart';
 import 'package:skycast/shared/ui/app_bar/app_bar.dart';
-import 'package:provider/provider.dart' as original_provider;
-
 class LandingHomeFrontPage extends HookConsumerWidget {
   final GetWeatherState weatherState;
 
@@ -51,16 +47,8 @@ class LandingHomeFrontPage extends HookConsumerWidget {
             controller: controller,
             slivers: <Widget>[
               BlocProvider.value(
-                value: BlocProvider.of<GetWeatherBloc>(context),
-                child: original_provider.MultiProvider(
-                  providers: [
-                    original_provider.ListenableProvider(
-                      create: (context) => getIt<IWeatherProvider>(),
-                    )
-                  ],
-                  child: const SliverAppBarHome(),
-                ),
-              ),
+                  value: BlocProvider.of<GetWeatherBloc>(context),
+                  child:  const SliverAppBarHome()),
               SliverAppBar(
                 pinned: true,
                 floating: true,
@@ -228,8 +216,7 @@ class LandingHomeFrontPage extends HookConsumerWidget {
                                   Positioned(
                                     top: 1,
                                     right: 10,
-                                    child: Text("Kph",
-                                        style: Theme.of(context).textTheme.displayMedium?.copyWith(fontSize: 50)),
+                                    child: Text("Kph", style: Theme.of(context).textTheme.displayMedium?.copyWith(fontSize: 50)),
                                   ),
                                   Positioned(
                                       bottom: 1,

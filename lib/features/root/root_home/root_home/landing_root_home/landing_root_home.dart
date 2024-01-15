@@ -29,7 +29,7 @@ class LandingRootHome extends HookConsumerWidget with NestedNavigationFunctionsM
           onGenerateRoute: AppRouter.onGenerateRouteRootHomeSecond),
       NestedScreen(
           navigatorKey: original_provider.Provider.of<NavigatorKeysProvider>(listen: false, context).navigationSettings,
-          onGenerateRoute: AppRouter.onGenerateRouteRootHomeSettings),
+          onGenerateRoute: AppRouter.onGenerateRouteRootHomeInfo),
     ];
 
     return original_provider.Consumer<NavigatorKeysProvider>(
@@ -85,11 +85,11 @@ class LandingRootHome extends HookConsumerWidget with NestedNavigationFunctionsM
                           ),
                           SideNavigationBarItem(
                             icon: Icons.pages,
-                            label: localizations.second,
+                            label: localizations.profile,
                           ),
                           SideNavigationBarItem(
-                            icon: Icons.settings,
-                            label: localizations.settings,
+                            icon: Icons.info,
+                            label: localizations.info,
                           ),
                         ],
                         onTap: (value) => onItemTapped(value, context),
@@ -127,11 +127,11 @@ class LandingRootHome extends HookConsumerWidget with NestedNavigationFunctionsM
                           ),
                           BottomNavigationBarItem(
                             icon: const Icon(Icons.pages),
-                            label: localizations.second,
+                            label: localizations.profile,
                           ),
                           BottomNavigationBarItem(
-                            icon: const Icon(Icons.settings),
-                            label: localizations.settings,
+                            icon: const Icon(Icons.info),
+                            label: localizations.info,
                           ),
                         ],
                         currentIndex: navigatorKeysProvider.selectedIndexDrawer,

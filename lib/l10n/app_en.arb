@@ -44,5 +44,8 @@
   "sunset": "Sunset",
   "sunrise": "Sunrise",
   "moonrise": "Moonrise",
-  "moonset": "Moonset"
+  "moonset": "Moonset",
+  "profile": "Profile",
+  "info": "Information",
+  "madeBy": "Made by"
 }

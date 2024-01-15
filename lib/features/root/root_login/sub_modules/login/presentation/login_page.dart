@@ -11,13 +11,14 @@ import 'package:skycast/shared/hooks/use_app_translations.dart';
 import 'package:skycast/shared/ui/app_bar/app_bar.dart';
 
 class LoginPage extends HookConsumerWidget {
-  const LoginPage({super.key});
+  final bool showAppBar;
+  const LoginPage({super.key, this.showAppBar = true});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final localizations = useAppTranslation(context)!;
     return Scaffold(
-      appBar: BaseAppBar(
+      appBar: showAppBar ? BaseAppBar(
         title: Text(localizations.login),
         appBar: AppBar(),
         showLoginButton: false,
@@ -31,7 +32,7 @@ class LoginPage extends HookConsumerWidget {
             }
           },
         ),
-      ),
+      ) : null,
       body: Center(
         child: BlocProvider(
           create: (context) => getIt<LoginBloc>(),

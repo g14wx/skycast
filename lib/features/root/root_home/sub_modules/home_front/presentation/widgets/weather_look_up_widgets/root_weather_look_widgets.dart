@@ -13,31 +13,34 @@ class RootWeatherLookWidgets extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocConsumer<GetWeatherBloc, GetWeatherState>(
       builder: (context, state) {
-        if (state is GetWeatherLoading) {
-          return Center(
-            child: Lottie.asset(Assets.loading2),
-          );
-        }
 
-        if (state is GetWeatherSuccess) {
-          return Center(
-            child: SuccessWeather(
-              currentWeather: state.currentWeather,
-            ),
-          );
-        }
+        return state.maybeMap(
+          getWeatherError: (value) {
+            Future.delayed(const Duration(seconds: 2)).then((value) {
+              BlocProvider.of<GetWeatherBloc>(context).add(const GetWeatherEvent.resetState());
+            });
 
-        if (state is GetWeatherError) {
-          Future.delayed(const Duration(seconds: 2)).then((value) {
-            BlocProvider.of<GetWeatherBloc>(context).add(const GetWeatherEvent.resetState());
-          });
+            return Center(
+              child: Lottie.asset(Assets.error1),
+            );
+          },
+          getWeatherLoading: (value) {
+            return Center(
+              child: Lottie.asset(Assets.loading2),
+            );
+          },
+          getWeatherSuccess: (value) {
+            return Center(
+              child: SuccessWeather(
+                currentWeather: value.currentWeather,
+              ),
+            );
+          },
+          orElse: () {
+            return const TileWeatherSeraching();
+        },);
 
-          return Center(
-            child: Lottie.asset(Assets.error1),
-          );
-        }
 
-        return const TileWeatherSeraching();
       },
       listener: (context, state) {},
     );

@@ -11,7 +11,7 @@ part 'login_state_state.dart';
 
 part 'login_state_bloc.freezed.dart';
 
-@injectable
+@lazySingleton
 class LoginStateBloc extends HydratedBloc<LoginStateEvent, LoginStateState> {
   final ILoginService _loginService;
 

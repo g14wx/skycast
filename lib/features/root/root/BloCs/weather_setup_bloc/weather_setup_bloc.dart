@@ -20,7 +20,7 @@ class WeatherSetupBloc extends Bloc<WeatherSetupEvent, WeatherSetupState> {
         getConditionTranslationsList: (value) async {
           // check if the conditions are already downloaded
 
-          await _weatherProvider.setup();
+          await _weatherProvider.setup(notify: false);
           final resultDataStorage = _weatherProvider.getConditions();
           if (resultDataStorage.isNotEmpty) {
             emit(const WeatherSetupState.success());

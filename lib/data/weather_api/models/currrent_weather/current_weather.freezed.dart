@@ -26,15 +26,20 @@ mixin _$CurrentWeather {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CurrentWeatherCopyWith<CurrentWeather> get copyWith => throw _privateConstructorUsedError;
+  $CurrentWeatherCopyWith<CurrentWeather> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CurrentWeatherCopyWith<$Res> {
-  factory $CurrentWeatherCopyWith(CurrentWeather value, $Res Function(CurrentWeather) then) =
+  factory $CurrentWeatherCopyWith(
+          CurrentWeather value, $Res Function(CurrentWeather) then) =
       _$CurrentWeatherCopyWithImpl<$Res, CurrentWeather>;
   @useResult
-  $Res call({LocationWeather location, InnerCurrentWeather current, ForecastWeather forecast});
+  $Res call(
+      {LocationWeather location,
+      InnerCurrentWeather current,
+      ForecastWeather forecast});
 
   $LocationWeatherCopyWith<$Res> get location;
   $InnerCurrentWeatherCopyWith<$Res> get current;
@@ -42,7 +47,8 @@ abstract class $CurrentWeatherCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CurrentWeatherCopyWithImpl<$Res, $Val extends CurrentWeather> implements $CurrentWeatherCopyWith<$Res> {
+class _$CurrentWeatherCopyWithImpl<$Res, $Val extends CurrentWeather>
+    implements $CurrentWeatherCopyWith<$Res> {
   _$CurrentWeatherCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -99,12 +105,17 @@ class _$CurrentWeatherCopyWithImpl<$Res, $Val extends CurrentWeather> implements
 }
 
 /// @nodoc
-abstract class _$$CurrentWeatherImplCopyWith<$Res> implements $CurrentWeatherCopyWith<$Res> {
-  factory _$$CurrentWeatherImplCopyWith(_$CurrentWeatherImpl value, $Res Function(_$CurrentWeatherImpl) then) =
+abstract class _$$CurrentWeatherImplCopyWith<$Res>
+    implements $CurrentWeatherCopyWith<$Res> {
+  factory _$$CurrentWeatherImplCopyWith(_$CurrentWeatherImpl value,
+          $Res Function(_$CurrentWeatherImpl) then) =
       __$$CurrentWeatherImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({LocationWeather location, InnerCurrentWeather current, ForecastWeather forecast});
+  $Res call(
+      {LocationWeather location,
+      InnerCurrentWeather current,
+      ForecastWeather forecast});
 
   @override
   $LocationWeatherCopyWith<$Res> get location;
@@ -115,9 +126,11 @@ abstract class _$$CurrentWeatherImplCopyWith<$Res> implements $CurrentWeatherCop
 }
 
 /// @nodoc
-class __$$CurrentWeatherImplCopyWithImpl<$Res> extends _$CurrentWeatherCopyWithImpl<$Res, _$CurrentWeatherImpl>
+class __$$CurrentWeatherImplCopyWithImpl<$Res>
+    extends _$CurrentWeatherCopyWithImpl<$Res, _$CurrentWeatherImpl>
     implements _$$CurrentWeatherImplCopyWith<$Res> {
-  __$$CurrentWeatherImplCopyWithImpl(_$CurrentWeatherImpl _value, $Res Function(_$CurrentWeatherImpl) _then)
+  __$$CurrentWeatherImplCopyWithImpl(
+      _$CurrentWeatherImpl _value, $Res Function(_$CurrentWeatherImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -147,9 +160,11 @@ class __$$CurrentWeatherImplCopyWithImpl<$Res> extends _$CurrentWeatherCopyWithI
 /// @nodoc
 @JsonSerializable()
 class _$CurrentWeatherImpl implements _CurrentWeather {
-  const _$CurrentWeatherImpl({required this.location, required this.current, required this.forecast});
+  const _$CurrentWeatherImpl(
+      {required this.location, required this.current, required this.forecast});
 
-  factory _$CurrentWeatherImpl.fromJson(Map<String, dynamic> json) => _$$CurrentWeatherImplFromJson(json);
+  factory _$CurrentWeatherImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CurrentWeatherImplFromJson(json);
 
   @override
   final LocationWeather location;
@@ -168,9 +183,11 @@ class _$CurrentWeatherImpl implements _CurrentWeather {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CurrentWeatherImpl &&
-            (identical(other.location, location) || other.location == location) &&
+            (identical(other.location, location) ||
+                other.location == location) &&
             (identical(other.current, current) || other.current == current) &&
-            (identical(other.forecast, forecast) || other.forecast == forecast));
+            (identical(other.forecast, forecast) ||
+                other.forecast == forecast));
   }
 
   @JsonKey(ignore: true)
@@ -181,7 +198,8 @@ class _$CurrentWeatherImpl implements _CurrentWeather {
   @override
   @pragma('vm:prefer-inline')
   _$$CurrentWeatherImplCopyWith<_$CurrentWeatherImpl> get copyWith =>
-      __$$CurrentWeatherImplCopyWithImpl<_$CurrentWeatherImpl>(this, _$identity);
+      __$$CurrentWeatherImplCopyWithImpl<_$CurrentWeatherImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -197,7 +215,8 @@ abstract class _CurrentWeather implements CurrentWeather {
       required final InnerCurrentWeather current,
       required final ForecastWeather forecast}) = _$CurrentWeatherImpl;
 
-  factory _CurrentWeather.fromJson(Map<String, dynamic> json) = _$CurrentWeatherImpl.fromJson;
+  factory _CurrentWeather.fromJson(Map<String, dynamic> json) =
+      _$CurrentWeatherImpl.fromJson;
 
   @override
   LocationWeather get location;
@@ -207,7 +226,8 @@ abstract class _CurrentWeather implements CurrentWeather {
   ForecastWeather get forecast;
   @override
   @JsonKey(ignore: true)
-  _$$CurrentWeatherImplCopyWith<_$CurrentWeatherImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$CurrentWeatherImplCopyWith<_$CurrentWeatherImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 LocationWeather _$LocationWeatherFromJson(Map<String, dynamic> json) {
@@ -222,19 +242,22 @@ mixin _$LocationWeather {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LocationWeatherCopyWith<LocationWeather> get copyWith => throw _privateConstructorUsedError;
+  $LocationWeatherCopyWith<LocationWeather> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $LocationWeatherCopyWith<$Res> {
-  factory $LocationWeatherCopyWith(LocationWeather value, $Res Function(LocationWeather) then) =
+  factory $LocationWeatherCopyWith(
+          LocationWeather value, $Res Function(LocationWeather) then) =
       _$LocationWeatherCopyWithImpl<$Res, LocationWeather>;
   @useResult
   $Res call({String name, String region, String country});
 }
 
 /// @nodoc
-class _$LocationWeatherCopyWithImpl<$Res, $Val extends LocationWeather> implements $LocationWeatherCopyWith<$Res> {
+class _$LocationWeatherCopyWithImpl<$Res, $Val extends LocationWeather>
+    implements $LocationWeatherCopyWith<$Res> {
   _$LocationWeatherCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -267,8 +290,10 @@ class _$LocationWeatherCopyWithImpl<$Res, $Val extends LocationWeather> implemen
 }
 
 /// @nodoc
-abstract class _$$LocationWeatherImplCopyWith<$Res> implements $LocationWeatherCopyWith<$Res> {
-  factory _$$LocationWeatherImplCopyWith(_$LocationWeatherImpl value, $Res Function(_$LocationWeatherImpl) then) =
+abstract class _$$LocationWeatherImplCopyWith<$Res>
+    implements $LocationWeatherCopyWith<$Res> {
+  factory _$$LocationWeatherImplCopyWith(_$LocationWeatherImpl value,
+          $Res Function(_$LocationWeatherImpl) then) =
       __$$LocationWeatherImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -276,9 +301,11 @@ abstract class _$$LocationWeatherImplCopyWith<$Res> implements $LocationWeatherC
 }
 
 /// @nodoc
-class __$$LocationWeatherImplCopyWithImpl<$Res> extends _$LocationWeatherCopyWithImpl<$Res, _$LocationWeatherImpl>
+class __$$LocationWeatherImplCopyWithImpl<$Res>
+    extends _$LocationWeatherCopyWithImpl<$Res, _$LocationWeatherImpl>
     implements _$$LocationWeatherImplCopyWith<$Res> {
-  __$$LocationWeatherImplCopyWithImpl(_$LocationWeatherImpl _value, $Res Function(_$LocationWeatherImpl) _then)
+  __$$LocationWeatherImplCopyWithImpl(
+      _$LocationWeatherImpl _value, $Res Function(_$LocationWeatherImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -308,9 +335,11 @@ class __$$LocationWeatherImplCopyWithImpl<$Res> extends _$LocationWeatherCopyWit
 /// @nodoc
 @JsonSerializable()
 class _$LocationWeatherImpl implements _LocationWeather {
-  const _$LocationWeatherImpl({required this.name, required this.region, required this.country});
+  const _$LocationWeatherImpl(
+      {required this.name, required this.region, required this.country});
 
-  factory _$LocationWeatherImpl.fromJson(Map<String, dynamic> json) => _$$LocationWeatherImplFromJson(json);
+  factory _$LocationWeatherImpl.fromJson(Map<String, dynamic> json) =>
+      _$$LocationWeatherImplFromJson(json);
 
   @override
   final String name;
@@ -342,7 +371,8 @@ class _$LocationWeatherImpl implements _LocationWeather {
   @override
   @pragma('vm:prefer-inline')
   _$$LocationWeatherImplCopyWith<_$LocationWeatherImpl> get copyWith =>
-      __$$LocationWeatherImplCopyWithImpl<_$LocationWeatherImpl>(this, _$identity);
+      __$$LocationWeatherImplCopyWithImpl<_$LocationWeatherImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -358,7 +388,8 @@ abstract class _LocationWeather implements LocationWeather {
       required final String region,
       required final String country}) = _$LocationWeatherImpl;
 
-  factory _LocationWeather.fromJson(Map<String, dynamic> json) = _$LocationWeatherImpl.fromJson;
+  factory _LocationWeather.fromJson(Map<String, dynamic> json) =
+      _$LocationWeatherImpl.fromJson;
 
   @override
   String get name;
@@ -368,7 +399,8 @@ abstract class _LocationWeather implements LocationWeather {
   String get country;
   @override
   @JsonKey(ignore: true)
-  _$$LocationWeatherImplCopyWith<_$LocationWeatherImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$LocationWeatherImplCopyWith<_$LocationWeatherImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 InnerCurrentWeather _$InnerCurrentWeatherFromJson(Map<String, dynamic> json) {
@@ -386,15 +418,23 @@ mixin _$InnerCurrentWeather {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $InnerCurrentWeatherCopyWith<InnerCurrentWeather> get copyWith => throw _privateConstructorUsedError;
+  $InnerCurrentWeatherCopyWith<InnerCurrentWeather> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $InnerCurrentWeatherCopyWith<$Res> {
-  factory $InnerCurrentWeatherCopyWith(InnerCurrentWeather value, $Res Function(InnerCurrentWeather) then) =
+  factory $InnerCurrentWeatherCopyWith(
+          InnerCurrentWeather value, $Res Function(InnerCurrentWeather) then) =
       _$InnerCurrentWeatherCopyWithImpl<$Res, InnerCurrentWeather>;
   @useResult
-  $Res call({WeatherCondition condition, double uv, double wind_kph, double humidity, double temp_c, double temp_f});
+  $Res call(
+      {WeatherCondition condition,
+      double uv,
+      double wind_kph,
+      double humidity,
+      double temp_c,
+      double temp_f});
 
   $WeatherConditionCopyWith<$Res> get condition;
 }
@@ -457,13 +497,20 @@ class _$InnerCurrentWeatherCopyWithImpl<$Res, $Val extends InnerCurrentWeather>
 }
 
 /// @nodoc
-abstract class _$$InnerCurrentWeatherImplCopyWith<$Res> implements $InnerCurrentWeatherCopyWith<$Res> {
-  factory _$$InnerCurrentWeatherImplCopyWith(
-          _$InnerCurrentWeatherImpl value, $Res Function(_$InnerCurrentWeatherImpl) then) =
+abstract class _$$InnerCurrentWeatherImplCopyWith<$Res>
+    implements $InnerCurrentWeatherCopyWith<$Res> {
+  factory _$$InnerCurrentWeatherImplCopyWith(_$InnerCurrentWeatherImpl value,
+          $Res Function(_$InnerCurrentWeatherImpl) then) =
       __$$InnerCurrentWeatherImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({WeatherCondition condition, double uv, double wind_kph, double humidity, double temp_c, double temp_f});
+  $Res call(
+      {WeatherCondition condition,
+      double uv,
+      double wind_kph,
+      double humidity,
+      double temp_c,
+      double temp_f});
 
   @override
   $WeatherConditionCopyWith<$Res> get condition;
@@ -473,8 +520,8 @@ abstract class _$$InnerCurrentWeatherImplCopyWith<$Res> implements $InnerCurrent
 class __$$InnerCurrentWeatherImplCopyWithImpl<$Res>
     extends _$InnerCurrentWeatherCopyWithImpl<$Res, _$InnerCurrentWeatherImpl>
     implements _$$InnerCurrentWeatherImplCopyWith<$Res> {
-  __$$InnerCurrentWeatherImplCopyWithImpl(
-      _$InnerCurrentWeatherImpl _value, $Res Function(_$InnerCurrentWeatherImpl) _then)
+  __$$InnerCurrentWeatherImplCopyWithImpl(_$InnerCurrentWeatherImpl _value,
+      $Res Function(_$InnerCurrentWeatherImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -527,7 +574,8 @@ class _$InnerCurrentWeatherImpl implements _InnerCurrentWeather {
       required this.temp_c,
       required this.temp_f});
 
-  factory _$InnerCurrentWeatherImpl.fromJson(Map<String, dynamic> json) => _$$InnerCurrentWeatherImplFromJson(json);
+  factory _$InnerCurrentWeatherImpl.fromJson(Map<String, dynamic> json) =>
+      _$$InnerCurrentWeatherImplFromJson(json);
 
   @override
   final WeatherCondition condition;
@@ -552,23 +600,28 @@ class _$InnerCurrentWeatherImpl implements _InnerCurrentWeather {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InnerCurrentWeatherImpl &&
-            (identical(other.condition, condition) || other.condition == condition) &&
+            (identical(other.condition, condition) ||
+                other.condition == condition) &&
             (identical(other.uv, uv) || other.uv == uv) &&
-            (identical(other.wind_kph, wind_kph) || other.wind_kph == wind_kph) &&
-            (identical(other.humidity, humidity) || other.humidity == humidity) &&
+            (identical(other.wind_kph, wind_kph) ||
+                other.wind_kph == wind_kph) &&
+            (identical(other.humidity, humidity) ||
+                other.humidity == humidity) &&
             (identical(other.temp_c, temp_c) || other.temp_c == temp_c) &&
             (identical(other.temp_f, temp_f) || other.temp_f == temp_f));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, condition, uv, wind_kph, humidity, temp_c, temp_f);
+  int get hashCode => Object.hash(
+      runtimeType, condition, uv, wind_kph, humidity, temp_c, temp_f);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$InnerCurrentWeatherImplCopyWith<_$InnerCurrentWeatherImpl> get copyWith =>
-      __$$InnerCurrentWeatherImplCopyWithImpl<_$InnerCurrentWeatherImpl>(this, _$identity);
+      __$$InnerCurrentWeatherImplCopyWithImpl<_$InnerCurrentWeatherImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -587,7 +640,8 @@ abstract class _InnerCurrentWeather implements InnerCurrentWeather {
       required final double temp_c,
       required final double temp_f}) = _$InnerCurrentWeatherImpl;
 
-  factory _InnerCurrentWeather.fromJson(Map<String, dynamic> json) = _$InnerCurrentWeatherImpl.fromJson;
+  factory _InnerCurrentWeather.fromJson(Map<String, dynamic> json) =
+      _$InnerCurrentWeatherImpl.fromJson;
 
   @override
   WeatherCondition get condition;
@@ -603,7 +657,8 @@ abstract class _InnerCurrentWeather implements InnerCurrentWeather {
   double get temp_f;
   @override
   @JsonKey(ignore: true)
-  _$$InnerCurrentWeatherImplCopyWith<_$InnerCurrentWeatherImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$InnerCurrentWeatherImplCopyWith<_$InnerCurrentWeatherImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 WeatherCondition _$WeatherConditionFromJson(Map<String, dynamic> json) {
@@ -618,19 +673,22 @@ mixin _$WeatherCondition {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $WeatherConditionCopyWith<WeatherCondition> get copyWith => throw _privateConstructorUsedError;
+  $WeatherConditionCopyWith<WeatherCondition> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $WeatherConditionCopyWith<$Res> {
-  factory $WeatherConditionCopyWith(WeatherCondition value, $Res Function(WeatherCondition) then) =
+  factory $WeatherConditionCopyWith(
+          WeatherCondition value, $Res Function(WeatherCondition) then) =
       _$WeatherConditionCopyWithImpl<$Res, WeatherCondition>;
   @useResult
   $Res call({String text, String icon, int code});
 }
 
 /// @nodoc
-class _$WeatherConditionCopyWithImpl<$Res, $Val extends WeatherCondition> implements $WeatherConditionCopyWith<$Res> {
+class _$WeatherConditionCopyWithImpl<$Res, $Val extends WeatherCondition>
+    implements $WeatherConditionCopyWith<$Res> {
   _$WeatherConditionCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -663,8 +721,10 @@ class _$WeatherConditionCopyWithImpl<$Res, $Val extends WeatherCondition> implem
 }
 
 /// @nodoc
-abstract class _$$WeatherConditionImplCopyWith<$Res> implements $WeatherConditionCopyWith<$Res> {
-  factory _$$WeatherConditionImplCopyWith(_$WeatherConditionImpl value, $Res Function(_$WeatherConditionImpl) then) =
+abstract class _$$WeatherConditionImplCopyWith<$Res>
+    implements $WeatherConditionCopyWith<$Res> {
+  factory _$$WeatherConditionImplCopyWith(_$WeatherConditionImpl value,
+          $Res Function(_$WeatherConditionImpl) then) =
       __$$WeatherConditionImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -672,9 +732,11 @@ abstract class _$$WeatherConditionImplCopyWith<$Res> implements $WeatherConditio
 }
 
 /// @nodoc
-class __$$WeatherConditionImplCopyWithImpl<$Res> extends _$WeatherConditionCopyWithImpl<$Res, _$WeatherConditionImpl>
+class __$$WeatherConditionImplCopyWithImpl<$Res>
+    extends _$WeatherConditionCopyWithImpl<$Res, _$WeatherConditionImpl>
     implements _$$WeatherConditionImplCopyWith<$Res> {
-  __$$WeatherConditionImplCopyWithImpl(_$WeatherConditionImpl _value, $Res Function(_$WeatherConditionImpl) _then)
+  __$$WeatherConditionImplCopyWithImpl(_$WeatherConditionImpl _value,
+      $Res Function(_$WeatherConditionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -704,9 +766,11 @@ class __$$WeatherConditionImplCopyWithImpl<$Res> extends _$WeatherConditionCopyW
 /// @nodoc
 @JsonSerializable()
 class _$WeatherConditionImpl implements _WeatherCondition {
-  const _$WeatherConditionImpl({required this.text, required this.icon, required this.code});
+  const _$WeatherConditionImpl(
+      {required this.text, required this.icon, required this.code});
 
-  factory _$WeatherConditionImpl.fromJson(Map<String, dynamic> json) => _$$WeatherConditionImplFromJson(json);
+  factory _$WeatherConditionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$WeatherConditionImplFromJson(json);
 
   @override
   final String text;
@@ -738,7 +802,8 @@ class _$WeatherConditionImpl implements _WeatherCondition {
   @override
   @pragma('vm:prefer-inline')
   _$$WeatherConditionImplCopyWith<_$WeatherConditionImpl> get copyWith =>
-      __$$WeatherConditionImplCopyWithImpl<_$WeatherConditionImpl>(this, _$identity);
+      __$$WeatherConditionImplCopyWithImpl<_$WeatherConditionImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -749,10 +814,13 @@ class _$WeatherConditionImpl implements _WeatherCondition {
 }
 
 abstract class _WeatherCondition implements WeatherCondition {
-  const factory _WeatherCondition({required final String text, required final String icon, required final int code}) =
-      _$WeatherConditionImpl;
+  const factory _WeatherCondition(
+      {required final String text,
+      required final String icon,
+      required final int code}) = _$WeatherConditionImpl;
 
-  factory _WeatherCondition.fromJson(Map<String, dynamic> json) = _$WeatherConditionImpl.fromJson;
+  factory _WeatherCondition.fromJson(Map<String, dynamic> json) =
+      _$WeatherConditionImpl.fromJson;
 
   @override
   String get text;
@@ -762,7 +830,8 @@ abstract class _WeatherCondition implements WeatherCondition {
   int get code;
   @override
   @JsonKey(ignore: true)
-  _$$WeatherConditionImplCopyWith<_$WeatherConditionImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$WeatherConditionImplCopyWith<_$WeatherConditionImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ForecastWeather _$ForecastWeatherFromJson(Map<String, dynamic> json) {
@@ -775,19 +844,22 @@ mixin _$ForecastWeather {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ForecastWeatherCopyWith<ForecastWeather> get copyWith => throw _privateConstructorUsedError;
+  $ForecastWeatherCopyWith<ForecastWeather> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ForecastWeatherCopyWith<$Res> {
-  factory $ForecastWeatherCopyWith(ForecastWeather value, $Res Function(ForecastWeather) then) =
+  factory $ForecastWeatherCopyWith(
+          ForecastWeather value, $Res Function(ForecastWeather) then) =
       _$ForecastWeatherCopyWithImpl<$Res, ForecastWeather>;
   @useResult
   $Res call({List<ForecastDay> forecastday});
 }
 
 /// @nodoc
-class _$ForecastWeatherCopyWithImpl<$Res, $Val extends ForecastWeather> implements $ForecastWeatherCopyWith<$Res> {
+class _$ForecastWeatherCopyWithImpl<$Res, $Val extends ForecastWeather>
+    implements $ForecastWeatherCopyWith<$Res> {
   _$ForecastWeatherCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -810,8 +882,10 @@ class _$ForecastWeatherCopyWithImpl<$Res, $Val extends ForecastWeather> implemen
 }
 
 /// @nodoc
-abstract class _$$ForecastWeatherImplCopyWith<$Res> implements $ForecastWeatherCopyWith<$Res> {
-  factory _$$ForecastWeatherImplCopyWith(_$ForecastWeatherImpl value, $Res Function(_$ForecastWeatherImpl) then) =
+abstract class _$$ForecastWeatherImplCopyWith<$Res>
+    implements $ForecastWeatherCopyWith<$Res> {
+  factory _$$ForecastWeatherImplCopyWith(_$ForecastWeatherImpl value,
+          $Res Function(_$ForecastWeatherImpl) then) =
       __$$ForecastWeatherImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -819,9 +893,11 @@ abstract class _$$ForecastWeatherImplCopyWith<$Res> implements $ForecastWeatherC
 }
 
 /// @nodoc
-class __$$ForecastWeatherImplCopyWithImpl<$Res> extends _$ForecastWeatherCopyWithImpl<$Res, _$ForecastWeatherImpl>
+class __$$ForecastWeatherImplCopyWithImpl<$Res>
+    extends _$ForecastWeatherCopyWithImpl<$Res, _$ForecastWeatherImpl>
     implements _$$ForecastWeatherImplCopyWith<$Res> {
-  __$$ForecastWeatherImplCopyWithImpl(_$ForecastWeatherImpl _value, $Res Function(_$ForecastWeatherImpl) _then)
+  __$$ForecastWeatherImplCopyWithImpl(
+      _$ForecastWeatherImpl _value, $Res Function(_$ForecastWeatherImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -841,9 +917,11 @@ class __$$ForecastWeatherImplCopyWithImpl<$Res> extends _$ForecastWeatherCopyWit
 /// @nodoc
 @JsonSerializable()
 class _$ForecastWeatherImpl implements _ForecastWeather {
-  const _$ForecastWeatherImpl({required final List<ForecastDay> forecastday}) : _forecastday = forecastday;
+  const _$ForecastWeatherImpl({required final List<ForecastDay> forecastday})
+      : _forecastday = forecastday;
 
-  factory _$ForecastWeatherImpl.fromJson(Map<String, dynamic> json) => _$$ForecastWeatherImplFromJson(json);
+  factory _$ForecastWeatherImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ForecastWeatherImplFromJson(json);
 
   final List<ForecastDay> _forecastday;
   @override
@@ -863,18 +941,21 @@ class _$ForecastWeatherImpl implements _ForecastWeather {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ForecastWeatherImpl &&
-            const DeepCollectionEquality().equals(other._forecastday, _forecastday));
+            const DeepCollectionEquality()
+                .equals(other._forecastday, _forecastday));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_forecastday));
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_forecastday));
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ForecastWeatherImplCopyWith<_$ForecastWeatherImpl> get copyWith =>
-      __$$ForecastWeatherImplCopyWithImpl<_$ForecastWeatherImpl>(this, _$identity);
+      __$$ForecastWeatherImplCopyWithImpl<_$ForecastWeatherImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -885,15 +966,18 @@ class _$ForecastWeatherImpl implements _ForecastWeather {
 }
 
 abstract class _ForecastWeather implements ForecastWeather {
-  const factory _ForecastWeather({required final List<ForecastDay> forecastday}) = _$ForecastWeatherImpl;
+  const factory _ForecastWeather(
+      {required final List<ForecastDay> forecastday}) = _$ForecastWeatherImpl;
 
-  factory _ForecastWeather.fromJson(Map<String, dynamic> json) = _$ForecastWeatherImpl.fromJson;
+  factory _ForecastWeather.fromJson(Map<String, dynamic> json) =
+      _$ForecastWeatherImpl.fromJson;
 
   @override
   List<ForecastDay> get forecastday;
   @override
   @JsonKey(ignore: true)
-  _$$ForecastWeatherImplCopyWith<_$ForecastWeatherImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$ForecastWeatherImplCopyWith<_$ForecastWeatherImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ForecastDay _$ForecastDayFromJson(Map<String, dynamic> json) {
@@ -907,12 +991,14 @@ mixin _$ForecastDay {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ForecastDayCopyWith<ForecastDay> get copyWith => throw _privateConstructorUsedError;
+  $ForecastDayCopyWith<ForecastDay> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ForecastDayCopyWith<$Res> {
-  factory $ForecastDayCopyWith(ForecastDay value, $Res Function(ForecastDay) then) =
+  factory $ForecastDayCopyWith(
+          ForecastDay value, $Res Function(ForecastDay) then) =
       _$ForecastDayCopyWithImpl<$Res, ForecastDay>;
   @useResult
   $Res call({ForecastForDay day, ForecastDayAstro astro});
@@ -922,7 +1008,8 @@ abstract class $ForecastDayCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ForecastDayCopyWithImpl<$Res, $Val extends ForecastDay> implements $ForecastDayCopyWith<$Res> {
+class _$ForecastDayCopyWithImpl<$Res, $Val extends ForecastDay>
+    implements $ForecastDayCopyWith<$Res> {
   _$ForecastDayCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -966,8 +1053,10 @@ class _$ForecastDayCopyWithImpl<$Res, $Val extends ForecastDay> implements $Fore
 }
 
 /// @nodoc
-abstract class _$$ForecastDayImplCopyWith<$Res> implements $ForecastDayCopyWith<$Res> {
-  factory _$$ForecastDayImplCopyWith(_$ForecastDayImpl value, $Res Function(_$ForecastDayImpl) then) =
+abstract class _$$ForecastDayImplCopyWith<$Res>
+    implements $ForecastDayCopyWith<$Res> {
+  factory _$$ForecastDayImplCopyWith(
+          _$ForecastDayImpl value, $Res Function(_$ForecastDayImpl) then) =
       __$$ForecastDayImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -980,9 +1069,11 @@ abstract class _$$ForecastDayImplCopyWith<$Res> implements $ForecastDayCopyWith<
 }
 
 /// @nodoc
-class __$$ForecastDayImplCopyWithImpl<$Res> extends _$ForecastDayCopyWithImpl<$Res, _$ForecastDayImpl>
+class __$$ForecastDayImplCopyWithImpl<$Res>
+    extends _$ForecastDayCopyWithImpl<$Res, _$ForecastDayImpl>
     implements _$$ForecastDayImplCopyWith<$Res> {
-  __$$ForecastDayImplCopyWithImpl(_$ForecastDayImpl _value, $Res Function(_$ForecastDayImpl) _then)
+  __$$ForecastDayImplCopyWithImpl(
+      _$ForecastDayImpl _value, $Res Function(_$ForecastDayImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1009,7 +1100,8 @@ class __$$ForecastDayImplCopyWithImpl<$Res> extends _$ForecastDayCopyWithImpl<$R
 class _$ForecastDayImpl implements _ForecastDay {
   const _$ForecastDayImpl({required this.day, required this.astro});
 
-  factory _$ForecastDayImpl.fromJson(Map<String, dynamic> json) => _$$ForecastDayImplFromJson(json);
+  factory _$ForecastDayImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ForecastDayImplFromJson(json);
 
   @override
   final ForecastForDay day;
@@ -1049,10 +1141,12 @@ class _$ForecastDayImpl implements _ForecastDay {
 }
 
 abstract class _ForecastDay implements ForecastDay {
-  const factory _ForecastDay({required final ForecastForDay day, required final ForecastDayAstro astro}) =
-      _$ForecastDayImpl;
+  const factory _ForecastDay(
+      {required final ForecastForDay day,
+      required final ForecastDayAstro astro}) = _$ForecastDayImpl;
 
-  factory _ForecastDay.fromJson(Map<String, dynamic> json) = _$ForecastDayImpl.fromJson;
+  factory _ForecastDay.fromJson(Map<String, dynamic> json) =
+      _$ForecastDayImpl.fromJson;
 
   @override
   ForecastForDay get day;
@@ -1060,7 +1154,8 @@ abstract class _ForecastDay implements ForecastDay {
   ForecastDayAstro get astro;
   @override
   @JsonKey(ignore: true)
-  _$$ForecastDayImplCopyWith<_$ForecastDayImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$ForecastDayImplCopyWith<_$ForecastDayImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ForecastForDay _$ForecastForDayFromJson(Map<String, dynamic> json) {
@@ -1079,12 +1174,14 @@ mixin _$ForecastForDay {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ForecastForDayCopyWith<ForecastForDay> get copyWith => throw _privateConstructorUsedError;
+  $ForecastForDayCopyWith<ForecastForDay> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ForecastForDayCopyWith<$Res> {
-  factory $ForecastForDayCopyWith(ForecastForDay value, $Res Function(ForecastForDay) then) =
+  factory $ForecastForDayCopyWith(
+          ForecastForDay value, $Res Function(ForecastForDay) then) =
       _$ForecastForDayCopyWithImpl<$Res, ForecastForDay>;
   @useResult
   $Res call(
@@ -1100,7 +1197,8 @@ abstract class $ForecastForDayCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ForecastForDayCopyWithImpl<$Res, $Val extends ForecastForDay> implements $ForecastForDayCopyWith<$Res> {
+class _$ForecastForDayCopyWithImpl<$Res, $Val extends ForecastForDay>
+    implements $ForecastForDayCopyWith<$Res> {
   _$ForecastForDayCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -1161,8 +1259,10 @@ class _$ForecastForDayCopyWithImpl<$Res, $Val extends ForecastForDay> implements
 }
 
 /// @nodoc
-abstract class _$$ForecastForDayImplCopyWith<$Res> implements $ForecastForDayCopyWith<$Res> {
-  factory _$$ForecastForDayImplCopyWith(_$ForecastForDayImpl value, $Res Function(_$ForecastForDayImpl) then) =
+abstract class _$$ForecastForDayImplCopyWith<$Res>
+    implements $ForecastForDayCopyWith<$Res> {
+  factory _$$ForecastForDayImplCopyWith(_$ForecastForDayImpl value,
+          $Res Function(_$ForecastForDayImpl) then) =
       __$$ForecastForDayImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -1180,9 +1280,11 @@ abstract class _$$ForecastForDayImplCopyWith<$Res> implements $ForecastForDayCop
 }
 
 /// @nodoc
-class __$$ForecastForDayImplCopyWithImpl<$Res> extends _$ForecastForDayCopyWithImpl<$Res, _$ForecastForDayImpl>
+class __$$ForecastForDayImplCopyWithImpl<$Res>
+    extends _$ForecastForDayCopyWithImpl<$Res, _$ForecastForDayImpl>
     implements _$$ForecastForDayImplCopyWith<$Res> {
-  __$$ForecastForDayImplCopyWithImpl(_$ForecastForDayImpl _value, $Res Function(_$ForecastForDayImpl) _then)
+  __$$ForecastForDayImplCopyWithImpl(
+      _$ForecastForDayImpl _value, $Res Function(_$ForecastForDayImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1241,7 +1343,8 @@ class _$ForecastForDayImpl implements _ForecastForDay {
       required this.daily_chance_of_snow,
       required this.condition});
 
-  factory _$ForecastForDayImpl.fromJson(Map<String, dynamic> json) => _$$ForecastForDayImplFromJson(json);
+  factory _$ForecastForDayImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ForecastForDayImplFromJson(json);
 
   @override
   final double maxtemp_c;
@@ -1268,8 +1371,10 @@ class _$ForecastForDayImpl implements _ForecastForDay {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ForecastForDayImpl &&
-            (identical(other.maxtemp_c, maxtemp_c) || other.maxtemp_c == maxtemp_c) &&
-            (identical(other.mintemp_c, mintemp_c) || other.mintemp_c == mintemp_c) &&
+            (identical(other.maxtemp_c, maxtemp_c) ||
+                other.maxtemp_c == maxtemp_c) &&
+            (identical(other.mintemp_c, mintemp_c) ||
+                other.mintemp_c == mintemp_c) &&
             (identical(other.daily_will_it_rain, daily_will_it_rain) ||
                 other.daily_will_it_rain == daily_will_it_rain) &&
             (identical(other.daily_chance_of_rain, daily_chance_of_rain) ||
@@ -1278,19 +1383,28 @@ class _$ForecastForDayImpl implements _ForecastForDay {
                 other.daily_will_it_snow == daily_will_it_snow) &&
             (identical(other.daily_chance_of_snow, daily_chance_of_snow) ||
                 other.daily_chance_of_snow == daily_chance_of_snow) &&
-            (identical(other.condition, condition) || other.condition == condition));
+            (identical(other.condition, condition) ||
+                other.condition == condition));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, maxtemp_c, mintemp_c, daily_will_it_rain, daily_chance_of_rain,
-      daily_will_it_snow, daily_chance_of_snow, condition);
+  int get hashCode => Object.hash(
+      runtimeType,
+      maxtemp_c,
+      mintemp_c,
+      daily_will_it_rain,
+      daily_chance_of_rain,
+      daily_will_it_snow,
+      daily_chance_of_snow,
+      condition);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ForecastForDayImplCopyWith<_$ForecastForDayImpl> get copyWith =>
-      __$$ForecastForDayImplCopyWithImpl<_$ForecastForDayImpl>(this, _$identity);
+      __$$ForecastForDayImplCopyWithImpl<_$ForecastForDayImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1310,7 +1424,8 @@ abstract class _ForecastForDay implements ForecastForDay {
       required final int daily_chance_of_snow,
       required final WeatherCondition condition}) = _$ForecastForDayImpl;
 
-  factory _ForecastForDay.fromJson(Map<String, dynamic> json) = _$ForecastForDayImpl.fromJson;
+  factory _ForecastForDay.fromJson(Map<String, dynamic> json) =
+      _$ForecastForDayImpl.fromJson;
 
   @override
   double get maxtemp_c;
@@ -1328,7 +1443,8 @@ abstract class _ForecastForDay implements ForecastForDay {
   WeatherCondition get condition;
   @override
   @JsonKey(ignore: true)
-  _$$ForecastForDayImplCopyWith<_$ForecastForDayImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$ForecastForDayImplCopyWith<_$ForecastForDayImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ForecastDayAstro _$ForecastDayAstroFromJson(Map<String, dynamic> json) {
@@ -1344,19 +1460,22 @@ mixin _$ForecastDayAstro {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ForecastDayAstroCopyWith<ForecastDayAstro> get copyWith => throw _privateConstructorUsedError;
+  $ForecastDayAstroCopyWith<ForecastDayAstro> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ForecastDayAstroCopyWith<$Res> {
-  factory $ForecastDayAstroCopyWith(ForecastDayAstro value, $Res Function(ForecastDayAstro) then) =
+  factory $ForecastDayAstroCopyWith(
+          ForecastDayAstro value, $Res Function(ForecastDayAstro) then) =
       _$ForecastDayAstroCopyWithImpl<$Res, ForecastDayAstro>;
   @useResult
   $Res call({String sunrise, String sunset, String moonrise, String moonset});
 }
 
 /// @nodoc
-class _$ForecastDayAstroCopyWithImpl<$Res, $Val extends ForecastDayAstro> implements $ForecastDayAstroCopyWith<$Res> {
+class _$ForecastDayAstroCopyWithImpl<$Res, $Val extends ForecastDayAstro>
+    implements $ForecastDayAstroCopyWith<$Res> {
   _$ForecastDayAstroCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -1394,8 +1513,10 @@ class _$ForecastDayAstroCopyWithImpl<$Res, $Val extends ForecastDayAstro> implem
 }
 
 /// @nodoc
-abstract class _$$ForecastDayAstroImplCopyWith<$Res> implements $ForecastDayAstroCopyWith<$Res> {
-  factory _$$ForecastDayAstroImplCopyWith(_$ForecastDayAstroImpl value, $Res Function(_$ForecastDayAstroImpl) then) =
+abstract class _$$ForecastDayAstroImplCopyWith<$Res>
+    implements $ForecastDayAstroCopyWith<$Res> {
+  factory _$$ForecastDayAstroImplCopyWith(_$ForecastDayAstroImpl value,
+          $Res Function(_$ForecastDayAstroImpl) then) =
       __$$ForecastDayAstroImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -1403,9 +1524,11 @@ abstract class _$$ForecastDayAstroImplCopyWith<$Res> implements $ForecastDayAstr
 }
 
 /// @nodoc
-class __$$ForecastDayAstroImplCopyWithImpl<$Res> extends _$ForecastDayAstroCopyWithImpl<$Res, _$ForecastDayAstroImpl>
+class __$$ForecastDayAstroImplCopyWithImpl<$Res>
+    extends _$ForecastDayAstroCopyWithImpl<$Res, _$ForecastDayAstroImpl>
     implements _$$ForecastDayAstroImplCopyWith<$Res> {
-  __$$ForecastDayAstroImplCopyWithImpl(_$ForecastDayAstroImpl _value, $Res Function(_$ForecastDayAstroImpl) _then)
+  __$$ForecastDayAstroImplCopyWithImpl(_$ForecastDayAstroImpl _value,
+      $Res Function(_$ForecastDayAstroImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1441,9 +1564,13 @@ class __$$ForecastDayAstroImplCopyWithImpl<$Res> extends _$ForecastDayAstroCopyW
 @JsonSerializable()
 class _$ForecastDayAstroImpl implements _ForecastDayAstro {
   const _$ForecastDayAstroImpl(
-      {required this.sunrise, required this.sunset, required this.moonrise, required this.moonset});
+      {required this.sunrise,
+      required this.sunset,
+      required this.moonrise,
+      required this.moonset});
 
-  factory _$ForecastDayAstroImpl.fromJson(Map<String, dynamic> json) => _$$ForecastDayAstroImplFromJson(json);
+  factory _$ForecastDayAstroImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ForecastDayAstroImplFromJson(json);
 
   @override
   final String sunrise;
@@ -1466,19 +1593,22 @@ class _$ForecastDayAstroImpl implements _ForecastDayAstro {
             other is _$ForecastDayAstroImpl &&
             (identical(other.sunrise, sunrise) || other.sunrise == sunrise) &&
             (identical(other.sunset, sunset) || other.sunset == sunset) &&
-            (identical(other.moonrise, moonrise) || other.moonrise == moonrise) &&
+            (identical(other.moonrise, moonrise) ||
+                other.moonrise == moonrise) &&
             (identical(other.moonset, moonset) || other.moonset == moonset));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, sunrise, sunset, moonrise, moonset);
+  int get hashCode =>
+      Object.hash(runtimeType, sunrise, sunset, moonrise, moonset);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ForecastDayAstroImplCopyWith<_$ForecastDayAstroImpl> get copyWith =>
-      __$$ForecastDayAstroImplCopyWithImpl<_$ForecastDayAstroImpl>(this, _$identity);
+      __$$ForecastDayAstroImplCopyWithImpl<_$ForecastDayAstroImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1495,7 +1625,8 @@ abstract class _ForecastDayAstro implements ForecastDayAstro {
       required final String moonrise,
       required final String moonset}) = _$ForecastDayAstroImpl;
 
-  factory _ForecastDayAstro.fromJson(Map<String, dynamic> json) = _$ForecastDayAstroImpl.fromJson;
+  factory _ForecastDayAstro.fromJson(Map<String, dynamic> json) =
+      _$ForecastDayAstroImpl.fromJson;
 
   @override
   String get sunrise;
@@ -1507,5 +1638,6 @@ abstract class _ForecastDayAstro implements ForecastDayAstro {
   String get moonset;
   @override
   @JsonKey(ignore: true)
-  _$$ForecastDayAstroImplCopyWith<_$ForecastDayAstroImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$ForecastDayAstroImplCopyWith<_$ForecastDayAstroImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
