@@ -9,6 +9,7 @@ jobs:
     name: Build & Release
     env:
       weather_api_key: ${{secrets.WEATHER_API_KEY}}
+      google_maps_api_key: ${{secrets.GOOGLE_MAPS_API_KEY}}
     runs-on: ubuntu-latest #macos-latest
     steps:
       - uses: actions/checkout@v1
@@ -17,8 +18,14 @@ jobs:
           touch env &&
           echo ENV=production >> env &&
           echo API_KEY=${{env.weather_api_key}} >> env &&
-          echo BASE_URL_WEATHER=https://api.weatherapi.com/v1 >> env &&
+          echo BASE_URL_WEATHER=api.weatherapi.com >> env &&
           echo PATH_FORECAST=/forecast.json >> env &&
+          echo PREFIX_URL_WEATHER=/v1 >> env &&
+          echo PATH_FORECAST=/forecast.json >> env &&
+          echo PATH_CONDITION_TRANSLATIONS=/docs/conditions.json >> env &&
+          echo GOOGLE_MAPS_API_KEY=${{env.google_maps_api_key}} >> env &&
+          echo PATH_TO_GET_SUGGESTIONS_FOR_DIRECTIONS=/maps/api/place/autocomplete/json >> env &&
+          echo BASE_URL_TO_GET_MAP_DIRECTIONS=maps.googleapis.com >> env &&
           cat env
       - uses: actions/setup-java@v1
         with:

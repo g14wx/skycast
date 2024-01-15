@@ -7,7 +7,9 @@ class StorageKeys {
   static const language = "language";
 
   // auth
-
   static const authService = "auth_service";
   static const authUser = "auth_service";
+  // Weather
+  static const weatherService = "weather_service";
+  static const weatherConditionsTranslations = "weather_conditions_translations";
 }

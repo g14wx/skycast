@@ -19,8 +19,9 @@ void main() {
   setUpAll(() async {
     HttpOverrides.global = null;
     GoogleFonts.config.allowRuntimeFetching = false;
-    const String envFile = "dotenv.test";
-    dotenv.testLoad(fileInput: envFile);
+    final file = File('test/dotenv.test');
+    final envString = await file.readAsString();
+    dotenv.testLoad(fileInput: envString);
     configureDependencies("test");
     // this is for make it works the next line and localize the IInitializationOfDataStorageService instance
     final getIt = GetIt.instance;

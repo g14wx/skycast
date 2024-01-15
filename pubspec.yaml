@@ -80,7 +80,8 @@ flutter:
     - assets/lottie/loading/
     - assets/lottie/success/
     - assets/lottie/error/
-    -  assets/splash/skycast512.png
+    - assets/lottie/weather/
+    - assets/splash/skycast512.png
   fonts:
     - family: Poppins
       fonts:

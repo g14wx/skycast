@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 mixin ResponsiveFunctionsMixin {
-  ResponsiveRowColumn buildRow({required BuildContext context, required List<ResponsiveRowColumnItem> children}) {
+  ResponsiveRowColumn buildRow(
+      {required BuildContext context, required List<ResponsiveRowColumnItem> children, bool reverse = false}) {
     return ResponsiveRowColumn(
         columnCrossAxisAlignment: CrossAxisAlignment.start,
         rowCrossAxisAlignment: CrossAxisAlignment.start,
-        layout:
-            ResponsiveBreakpoints.of(context).isMobile ? ResponsiveRowColumnType.COLUMN : ResponsiveRowColumnType.ROW,
+        layout: ResponsiveBreakpoints.of(context).isMobile && !reverse
+            ? ResponsiveRowColumnType.COLUMN
+            : ResponsiveRowColumnType.ROW,
         children: [...children]);
   }
 
@@ -15,6 +17,7 @@ mixin ResponsiveFunctionsMixin {
       {required BuildContext context,
       required List<ResponsiveRowColumnItem> children,
       FlexFit? rowFlexFit = FlexFit.tight,
+      FlexFit? columnFit = FlexFit.tight,
       ResponsiveRowColumnType? layout,
       EdgeInsets? edgeInsetsRow,
       EdgeInsets? edgeInsetsColumn,
@@ -27,6 +30,7 @@ mixin ResponsiveFunctionsMixin {
             ? ResponsiveRowColumnType.COLUMN
             : ResponsiveRowColumnType.ROW;
     return ResponsiveRowColumnItem(
+      columnFit: columnFit,
       rowFit: rowFlexFit,
       child: Padding(
         padding: padding ?? const EdgeInsets.all(0),
@@ -45,6 +49,7 @@ mixin ResponsiveFunctionsMixin {
       {required BuildContext context,
       required Widget child,
       FlexFit? rowFlexFix,
+      FlexFit? colFlexFix,
       EdgeInsets? edgeInsetsRow,
       EdgeInsets? edgeInsetsColumn,
       EdgeInsets? edgeInsets}) {
@@ -53,6 +58,7 @@ mixin ResponsiveFunctionsMixin {
         edgeInsets;
     return ResponsiveRowColumnItem(
         rowFit: rowFlexFix,
+        rowFlex: 1,
         child: padding != null
             ? Padding(
                 padding: padding,

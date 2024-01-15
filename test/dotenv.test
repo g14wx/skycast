@@ -1,1 +1,11 @@
+ENV=test
 FLUTTER_ENV=test
+API_KEY=
+BASE_URL_WEATHER=api.weatherapi.com
+PREFIX_URL_WEATHER=/v1
+PATH_FORECAST=/forecast.json
+PATH_CONDITION_TRANSLATIONS=/docs/conditions.json
+
+GOOGLE_MAPS_API_KEY=
+PATH_TO_GET_SUGGESTIONS_FOR_DIRECTIONS=/maps/api/place/autocomplete/json
+BASE_URL_TO_GET_MAP_DIRECTIONS=maps.googleapis.com

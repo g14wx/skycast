@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:skycast/features/root/root/BloCs/weather_setup_bloc/weather_setup_bloc.dart';
 
-import 'package:skycast/BloCs/default_bloc.dart';
 import 'package:skycast/features/root/root/landing_root.dart';
 import 'package:skycast/features/root/root_home/root_home/wrapping_landing_root_home.dart';
+import 'package:skycast/features/root/root_home/sub_modules/home_front/BloCs/get_weather_bloc/get_weather_bloc.dart';
+import 'package:skycast/features/root/root_home/sub_modules/home_front/landing_home_front.dart';
+import 'package:skycast/features/root/root_home/sub_modules/second_front/landing_root_home_second_front.dart';
+import 'package:skycast/features/root/root_home/sub_modules/settings_front/landing_root_home_settings.dart';
 import 'package:skycast/features/root/root_login/root_login/root_login_navigator.dart';
+import 'package:skycast/features/root/root_login/sub_modules/login/landing_login.dart';
 import 'package:skycast/providers/default_provider/default_provider.dart';
+import 'package:skycast/providers/weather_provider/weather_storage_manager/protocols/i_weather_provider.dart';
 
 import 'package:skycast/router/constants/app_routes.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 import 'package:skycast/router/providers/navigator_keys_provider.dart';
 import 'package:skycast/services/service_locator/service_locator_setup.dart';
-
-import '../features/root/root_home/sub_modules/home_front/landing_home_front.dart';
-import '../features/root/root_home/sub_modules/second_front/landing_root_home_second_front.dart';
-import '../features/root/root_home/sub_modules/settings_front/landing_root_home_settings.dart';
-import '../features/root/root_login/sub_modules/login/landing_login.dart';
+import 'package:skycast/shared/BloCs/default_bloc/default_bloc.dart';
 
 class AppRouter {
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
@@ -28,7 +30,7 @@ class AppRouter {
             ],
             child: MultiBlocProvider(providers: [
               BlocProvider(
-                create: (_) => getIt<DefaultBloc>(),
+                create: (_) => getIt<WeatherSetupBloc>(),
               )
             ], child: const LandingRoot()),
           );
@@ -102,11 +104,14 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (context) {
             return BlocProvider(
-              create: (context) => getIt<DefaultBloc>(),
+              create: (context) => getIt<GetWeatherBloc>(),
               child: MultiProvider(
                 providers: [
                   ListenableProvider(
                     create: (context) => getIt<DefaultProvider>(),
+                  ),
+                  ListenableProvider(
+                    create: (context) => getIt<IWeatherProvider>(),
                   )
                 ],
                 child: const LandingHomeFront(),
