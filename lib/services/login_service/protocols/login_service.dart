@@ -4,11 +4,12 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:injectable/injectable.dart';
+import 'package:skycast/constants/env.dart';
 import 'package:skycast/providers/auth_provider/models/auth_user.dart';
 import 'package:skycast/services/login_service/implementations/i_login_service.dart';
 import 'package:skycast/providers/auth_provider/auth_provider.dart' as auth_provider;
 
-@Injectable(as: ILoginService)
+@Injectable(as: ILoginService, env :[Env.production, Env.staging, Env.local])
 class LoginService implements ILoginService {
   final auth_provider.AuthProvider _authProvider;
   LoginService(this._authProvider);
