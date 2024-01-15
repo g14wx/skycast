@@ -10,6 +10,7 @@ import 'package:skycast/features/root/root_home/sub_modules/home_front/presentat
 import 'package:skycast/features/root/root_home/sub_modules/home_front/presentation/widgets/sliver_app_bar_home.dart';
 import 'package:skycast/shared/hooks/use_app_translations.dart';
 import 'package:skycast/shared/ui/app_bar/app_bar.dart';
+
 class LandingHomeFrontPage extends HookConsumerWidget {
   final GetWeatherState weatherState;
 
@@ -46,9 +47,7 @@ class LandingHomeFrontPage extends HookConsumerWidget {
           child: CustomScrollView(
             controller: controller,
             slivers: <Widget>[
-              BlocProvider.value(
-                  value: BlocProvider.of<GetWeatherBloc>(context),
-                  child:  const SliverAppBarHome()),
+              BlocProvider.value(value: BlocProvider.of<GetWeatherBloc>(context), child: const SliverAppBarHome()),
               SliverAppBar(
                 pinned: true,
                 floating: true,
@@ -216,7 +215,8 @@ class LandingHomeFrontPage extends HookConsumerWidget {
                                   Positioned(
                                     top: 1,
                                     right: 10,
-                                    child: Text("Kph", style: Theme.of(context).textTheme.displayMedium?.copyWith(fontSize: 50)),
+                                    child: Text("Kph",
+                                        style: Theme.of(context).textTheme.displayMedium?.copyWith(fontSize: 50)),
                                   ),
                                   Positioned(
                                       bottom: 1,

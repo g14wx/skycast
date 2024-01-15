@@ -14,11 +14,19 @@ class RootHomeSettingsPage extends HookConsumerWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(translations.madeBy),
-            Flexible(child: ClipOval(
+            Text(
+              translations.madeBy,
+              style: Theme.of(context).textTheme.titleLarge,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Flexible(
+                child: ClipOval(
               child: CachedNetworkImage(
                 fadeInDuration: const Duration(seconds: 1),
-                imageUrl: "https://avatars.githubusercontent.com/u/75600781?s=400&u=a37393c8ad7f51d39f29d3dd0c5580b02e0bd769&v=4",
+                imageUrl:
+                    "https://avatars.githubusercontent.com/u/75600781?s=400&u=a37393c8ad7f51d39f29d3dd0c5580b02e0bd769&v=4",
                 placeholder: (context, url) {
                   return Container();
                 },
@@ -28,6 +36,9 @@ class RootHomeSettingsPage extends HookConsumerWidget {
                 width: 164,
               ),
             )),
+            const SizedBox(
+              height: 10,
+            ),
             const Text("Carlos Hernandez (g14wx)")
           ],
         ),

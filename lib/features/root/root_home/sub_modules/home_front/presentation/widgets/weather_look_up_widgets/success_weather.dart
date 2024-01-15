@@ -38,9 +38,13 @@ class SuccessWeather extends HookConsumerWidget {
           style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: Colors.white, fontSize: 35),
         ),
         Text(
-    (appSettings.language == GlobalAppConstants.languageEn)
+          (appSettings.language == GlobalAppConstants.languageEn)
               ? currentWeather.current.condition.text
-              : getTranslation(code: currentWeather.current.condition.code, currentLanguage: appSettings.language, fallbackTitle: currentWeather.current.condition.text, conditionsTranslations: conditionsTranslations ),
+              : getTranslation(
+                  code: currentWeather.current.condition.code,
+                  currentLanguage: appSettings.language,
+                  fallbackTitle: currentWeather.current.condition.text,
+                  conditionsTranslations: conditionsTranslations),
           style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: Colors.white, fontSize: 12),
         ),
         const SizedBox(
@@ -69,10 +73,18 @@ class SuccessWeather extends HookConsumerWidget {
     );
   }
 
-  String getTranslation({required int code, required currentLanguage, required String fallbackTitle, required List<ConditionTranslation> conditionsTranslations }) {
+  String getTranslation(
+      {required int code,
+      required currentLanguage,
+      required String fallbackTitle,
+      required List<ConditionTranslation> conditionsTranslations}) {
     if (conditionsTranslations.isEmpty ||
         conditionsTranslations.where((element) => element.code == code).isEmpty ||
-        conditionsTranslations.firstWhere((element) => element.code == code).languages.where((element) => element.lang_iso == currentLanguage).isEmpty) {
+        conditionsTranslations
+            .firstWhere((element) => element.code == code)
+            .languages
+            .where((element) => element.lang_iso == currentLanguage)
+            .isEmpty) {
       return fallbackTitle;
     }
     return conditionsTranslations

@@ -34,20 +34,17 @@ mixin _$WeatherSetupEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_GetConditionTranslationsList value)
-        getConditionTranslationsList,
+    required TResult Function(_GetConditionTranslationsList value) getConditionTranslationsList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_GetConditionTranslationsList value)?
-        getConditionTranslationsList,
+    TResult? Function(_GetConditionTranslationsList value)? getConditionTranslationsList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_GetConditionTranslationsList value)?
-        getConditionTranslationsList,
+    TResult Function(_GetConditionTranslationsList value)? getConditionTranslationsList,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -55,8 +52,7 @@ mixin _$WeatherSetupEvent {
 
 /// @nodoc
 abstract class $WeatherSetupEventCopyWith<$Res> {
-  factory $WeatherSetupEventCopyWith(
-          WeatherSetupEvent value, $Res Function(WeatherSetupEvent) then) =
+  factory $WeatherSetupEventCopyWith(WeatherSetupEvent value, $Res Function(WeatherSetupEvent) then) =
       _$WeatherSetupEventCopyWithImpl<$Res, WeatherSetupEvent>;
 }
 
@@ -74,26 +70,22 @@ class _$WeatherSetupEventCopyWithImpl<$Res, $Val extends WeatherSetupEvent>
 /// @nodoc
 abstract class _$$GetConditionTranslationsListImplCopyWith<$Res> {
   factory _$$GetConditionTranslationsListImplCopyWith(
-          _$GetConditionTranslationsListImpl value,
-          $Res Function(_$GetConditionTranslationsListImpl) then) =
+          _$GetConditionTranslationsListImpl value, $Res Function(_$GetConditionTranslationsListImpl) then) =
       __$$GetConditionTranslationsListImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
 class __$$GetConditionTranslationsListImplCopyWithImpl<$Res>
-    extends _$WeatherSetupEventCopyWithImpl<$Res,
-        _$GetConditionTranslationsListImpl>
+    extends _$WeatherSetupEventCopyWithImpl<$Res, _$GetConditionTranslationsListImpl>
     implements _$$GetConditionTranslationsListImplCopyWith<$Res> {
   __$$GetConditionTranslationsListImplCopyWithImpl(
-      _$GetConditionTranslationsListImpl _value,
-      $Res Function(_$GetConditionTranslationsListImpl) _then)
+      _$GetConditionTranslationsListImpl _value, $Res Function(_$GetConditionTranslationsListImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$GetConditionTranslationsListImpl
-    implements _GetConditionTranslationsList {
+class _$GetConditionTranslationsListImpl implements _GetConditionTranslationsList {
   const _$GetConditionTranslationsListImpl();
 
   @override
@@ -103,9 +95,7 @@ class _$GetConditionTranslationsListImpl
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$GetConditionTranslationsListImpl);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$GetConditionTranslationsListImpl);
   }
 
   @override
@@ -142,8 +132,7 @@ class _$GetConditionTranslationsListImpl
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_GetConditionTranslationsList value)
-        getConditionTranslationsList,
+    required TResult Function(_GetConditionTranslationsList value) getConditionTranslationsList,
   }) {
     return getConditionTranslationsList(this);
   }
@@ -151,8 +140,7 @@ class _$GetConditionTranslationsListImpl
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_GetConditionTranslationsList value)?
-        getConditionTranslationsList,
+    TResult? Function(_GetConditionTranslationsList value)? getConditionTranslationsList,
   }) {
     return getConditionTranslationsList?.call(this);
   }
@@ -160,8 +148,7 @@ class _$GetConditionTranslationsListImpl
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_GetConditionTranslationsList value)?
-        getConditionTranslationsList,
+    TResult Function(_GetConditionTranslationsList value)? getConditionTranslationsList,
     required TResult orElse(),
   }) {
     if (getConditionTranslationsList != null) {
@@ -172,8 +159,7 @@ class _$GetConditionTranslationsListImpl
 }
 
 abstract class _GetConditionTranslationsList implements WeatherSetupEvent {
-  const factory _GetConditionTranslationsList() =
-      _$GetConditionTranslationsListImpl;
+  const factory _GetConditionTranslationsList() = _$GetConditionTranslationsListImpl;
 }
 
 /// @nodoc
@@ -226,8 +212,7 @@ mixin _$WeatherSetupState {
 
 /// @nodoc
 abstract class $WeatherSetupStateCopyWith<$Res> {
-  factory $WeatherSetupStateCopyWith(
-          WeatherSetupState value, $Res Function(WeatherSetupState) then) =
+  factory $WeatherSetupStateCopyWith(WeatherSetupState value, $Res Function(WeatherSetupState) then) =
       _$WeatherSetupStateCopyWithImpl<$Res, WeatherSetupState>;
 }
 
@@ -244,18 +229,14 @@ class _$WeatherSetupStateCopyWithImpl<$Res, $Val extends WeatherSetupState>
 
 /// @nodoc
 abstract class _$$LoadingImplCopyWith<$Res> {
-  factory _$$LoadingImplCopyWith(
-          _$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
+  factory _$$LoadingImplCopyWith(_$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
       __$$LoadingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoadingImplCopyWithImpl<$Res>
-    extends _$WeatherSetupStateCopyWithImpl<$Res, _$LoadingImpl>
+class __$$LoadingImplCopyWithImpl<$Res> extends _$WeatherSetupStateCopyWithImpl<$Res, _$LoadingImpl>
     implements _$$LoadingImplCopyWith<$Res> {
-  __$$LoadingImplCopyWithImpl(
-      _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
-      : super(_value, _then);
+  __$$LoadingImplCopyWithImpl(_$LoadingImpl _value, $Res Function(_$LoadingImpl) _then) : super(_value, _then);
 }
 
 /// @nodoc
@@ -270,8 +251,7 @@ class _$LoadingImpl implements _Loading {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingImpl);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$LoadingImpl);
   }
 
   @override
@@ -352,18 +332,14 @@ abstract class _Loading implements WeatherSetupState {
 
 /// @nodoc
 abstract class _$$SuccessImplCopyWith<$Res> {
-  factory _$$SuccessImplCopyWith(
-          _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
+  factory _$$SuccessImplCopyWith(_$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
       __$$SuccessImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$SuccessImplCopyWithImpl<$Res>
-    extends _$WeatherSetupStateCopyWithImpl<$Res, _$SuccessImpl>
+class __$$SuccessImplCopyWithImpl<$Res> extends _$WeatherSetupStateCopyWithImpl<$Res, _$SuccessImpl>
     implements _$$SuccessImplCopyWith<$Res> {
-  __$$SuccessImplCopyWithImpl(
-      _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
-      : super(_value, _then);
+  __$$SuccessImplCopyWithImpl(_$SuccessImpl _value, $Res Function(_$SuccessImpl) _then) : super(_value, _then);
 }
 
 /// @nodoc
@@ -378,8 +354,7 @@ class _$SuccessImpl implements _Success {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SuccessImpl);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$SuccessImpl);
   }
 
   @override
@@ -460,20 +435,16 @@ abstract class _Success implements WeatherSetupState {
 
 /// @nodoc
 abstract class _$$FailedImplCopyWith<$Res> {
-  factory _$$FailedImplCopyWith(
-          _$FailedImpl value, $Res Function(_$FailedImpl) then) =
+  factory _$$FailedImplCopyWith(_$FailedImpl value, $Res Function(_$FailedImpl) then) =
       __$$FailedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String failedMsg});
 }
 
 /// @nodoc
-class __$$FailedImplCopyWithImpl<$Res>
-    extends _$WeatherSetupStateCopyWithImpl<$Res, _$FailedImpl>
+class __$$FailedImplCopyWithImpl<$Res> extends _$WeatherSetupStateCopyWithImpl<$Res, _$FailedImpl>
     implements _$$FailedImplCopyWith<$Res> {
-  __$$FailedImplCopyWithImpl(
-      _$FailedImpl _value, $Res Function(_$FailedImpl) _then)
-      : super(_value, _then);
+  __$$FailedImplCopyWithImpl(_$FailedImpl _value, $Res Function(_$FailedImpl) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -507,8 +478,7 @@ class _$FailedImpl implements _Failed {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FailedImpl &&
-            (identical(other.failedMsg, failedMsg) ||
-                other.failedMsg == failedMsg));
+            (identical(other.failedMsg, failedMsg) || other.failedMsg == failedMsg));
   }
 
   @override
@@ -517,8 +487,7 @@ class _$FailedImpl implements _Failed {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$FailedImplCopyWith<_$FailedImpl> get copyWith =>
-      __$$FailedImplCopyWithImpl<_$FailedImpl>(this, _$identity);
+  _$$FailedImplCopyWith<_$FailedImpl> get copyWith => __$$FailedImplCopyWithImpl<_$FailedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -594,6 +563,5 @@ abstract class _Failed implements WeatherSetupState {
 
   String get failedMsg;
   @JsonKey(ignore: true)
-  _$$FailedImplCopyWith<_$FailedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$FailedImplCopyWith<_$FailedImpl> get copyWith => throw _privateConstructorUsedError;
 }

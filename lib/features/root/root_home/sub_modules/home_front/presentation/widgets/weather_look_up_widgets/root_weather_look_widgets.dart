@@ -13,7 +13,6 @@ class RootWeatherLookWidgets extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocConsumer<GetWeatherBloc, GetWeatherState>(
       builder: (context, state) {
-
         return state.maybeMap(
           getWeatherError: (value) {
             Future.delayed(const Duration(seconds: 2)).then((value) {
@@ -38,9 +37,8 @@ class RootWeatherLookWidgets extends StatelessWidget {
           },
           orElse: () {
             return const TileWeatherSeraching();
-        },);
-
-
+          },
+        );
       },
       listener: (context, state) {},
     );

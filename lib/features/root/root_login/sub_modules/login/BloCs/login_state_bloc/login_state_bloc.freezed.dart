@@ -64,14 +64,12 @@ mixin _$LoginStateEvent {
 
 /// @nodoc
 abstract class $LoginStateEventCopyWith<$Res> {
-  factory $LoginStateEventCopyWith(
-          LoginStateEvent value, $Res Function(LoginStateEvent) then) =
+  factory $LoginStateEventCopyWith(LoginStateEvent value, $Res Function(LoginStateEvent) then) =
       _$LoginStateEventCopyWithImpl<$Res, LoginStateEvent>;
 }
 
 /// @nodoc
-class _$LoginStateEventCopyWithImpl<$Res, $Val extends LoginStateEvent>
-    implements $LoginStateEventCopyWith<$Res> {
+class _$LoginStateEventCopyWithImpl<$Res, $Val extends LoginStateEvent> implements $LoginStateEventCopyWith<$Res> {
   _$LoginStateEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -82,8 +80,7 @@ class _$LoginStateEventCopyWithImpl<$Res, $Val extends LoginStateEvent>
 
 /// @nodoc
 abstract class _$$LoginIsSuccessImplCopyWith<$Res> {
-  factory _$$LoginIsSuccessImplCopyWith(_$LoginIsSuccessImpl value,
-          $Res Function(_$LoginIsSuccessImpl) then) =
+  factory _$$LoginIsSuccessImplCopyWith(_$LoginIsSuccessImpl value, $Res Function(_$LoginIsSuccessImpl) then) =
       __$$LoginIsSuccessImplCopyWithImpl<$Res>;
   @useResult
   $Res call({AuthUser authUser});
@@ -92,11 +89,9 @@ abstract class _$$LoginIsSuccessImplCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$LoginIsSuccessImplCopyWithImpl<$Res>
-    extends _$LoginStateEventCopyWithImpl<$Res, _$LoginIsSuccessImpl>
+class __$$LoginIsSuccessImplCopyWithImpl<$Res> extends _$LoginStateEventCopyWithImpl<$Res, _$LoginIsSuccessImpl>
     implements _$$LoginIsSuccessImplCopyWith<$Res> {
-  __$$LoginIsSuccessImplCopyWithImpl(
-      _$LoginIsSuccessImpl _value, $Res Function(_$LoginIsSuccessImpl) _then)
+  __$$LoginIsSuccessImplCopyWithImpl(_$LoginIsSuccessImpl _value, $Res Function(_$LoginIsSuccessImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -139,8 +134,7 @@ class _$LoginIsSuccessImpl implements _LoginIsSuccess {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LoginIsSuccessImpl &&
-            (identical(other.authUser, authUser) ||
-                other.authUser == authUser));
+            (identical(other.authUser, authUser) || other.authUser == authUser));
   }
 
   @override
@@ -150,8 +144,7 @@ class _$LoginIsSuccessImpl implements _LoginIsSuccess {
   @override
   @pragma('vm:prefer-inline')
   _$$LoginIsSuccessImplCopyWith<_$LoginIsSuccessImpl> get copyWith =>
-      __$$LoginIsSuccessImplCopyWithImpl<_$LoginIsSuccessImpl>(
-          this, _$identity);
+      __$$LoginIsSuccessImplCopyWithImpl<_$LoginIsSuccessImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -223,28 +216,23 @@ class _$LoginIsSuccessImpl implements _LoginIsSuccess {
 }
 
 abstract class _LoginIsSuccess implements LoginStateEvent {
-  const factory _LoginIsSuccess({required final AuthUser authUser}) =
-      _$LoginIsSuccessImpl;
+  const factory _LoginIsSuccess({required final AuthUser authUser}) = _$LoginIsSuccessImpl;
 
   AuthUser get authUser;
   @JsonKey(ignore: true)
-  _$$LoginIsSuccessImplCopyWith<_$LoginIsSuccessImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$LoginIsSuccessImplCopyWith<_$LoginIsSuccessImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$SetLoginScreenImplCopyWith<$Res> {
-  factory _$$SetLoginScreenImplCopyWith(_$SetLoginScreenImpl value,
-          $Res Function(_$SetLoginScreenImpl) then) =
+  factory _$$SetLoginScreenImplCopyWith(_$SetLoginScreenImpl value, $Res Function(_$SetLoginScreenImpl) then) =
       __$$SetLoginScreenImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$SetLoginScreenImplCopyWithImpl<$Res>
-    extends _$LoginStateEventCopyWithImpl<$Res, _$SetLoginScreenImpl>
+class __$$SetLoginScreenImplCopyWithImpl<$Res> extends _$LoginStateEventCopyWithImpl<$Res, _$SetLoginScreenImpl>
     implements _$$SetLoginScreenImplCopyWith<$Res> {
-  __$$SetLoginScreenImplCopyWithImpl(
-      _$SetLoginScreenImpl _value, $Res Function(_$SetLoginScreenImpl) _then)
+  __$$SetLoginScreenImplCopyWithImpl(_$SetLoginScreenImpl _value, $Res Function(_$SetLoginScreenImpl) _then)
       : super(_value, _then);
 }
 
@@ -260,8 +248,7 @@ class _$SetLoginScreenImpl implements _SetLoginScreen {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SetLoginScreenImpl);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$SetLoginScreenImpl);
   }
 
   @override
@@ -342,18 +329,14 @@ abstract class _SetLoginScreen implements LoginStateEvent {
 
 /// @nodoc
 abstract class _$$LogoutImplCopyWith<$Res> {
-  factory _$$LogoutImplCopyWith(
-          _$LogoutImpl value, $Res Function(_$LogoutImpl) then) =
+  factory _$$LogoutImplCopyWith(_$LogoutImpl value, $Res Function(_$LogoutImpl) then) =
       __$$LogoutImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LogoutImplCopyWithImpl<$Res>
-    extends _$LoginStateEventCopyWithImpl<$Res, _$LogoutImpl>
+class __$$LogoutImplCopyWithImpl<$Res> extends _$LoginStateEventCopyWithImpl<$Res, _$LogoutImpl>
     implements _$$LogoutImplCopyWith<$Res> {
-  __$$LogoutImplCopyWithImpl(
-      _$LogoutImpl _value, $Res Function(_$LogoutImpl) _then)
-      : super(_value, _then);
+  __$$LogoutImplCopyWithImpl(_$LogoutImpl _value, $Res Function(_$LogoutImpl) _then) : super(_value, _then);
 }
 
 /// @nodoc
@@ -368,8 +351,7 @@ class _$LogoutImpl implements _Logout {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LogoutImpl);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$LogoutImpl);
   }
 
   @override

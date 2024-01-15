@@ -18,21 +18,23 @@ class LoginPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final localizations = useAppTranslation(context)!;
     return Scaffold(
-      appBar: showAppBar ? BaseAppBar(
-        title: Text(localizations.login),
-        appBar: AppBar(),
-        showLoginButton: false,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () {
-            final navigatorProvider = NavigatorKeys.navigationDefault;
-            final defaultContext = navigatorProvider.currentContext;
-            if (defaultContext != null) {
-              Navigator.of(defaultContext).pop();
-            }
-          },
-        ),
-      ) : null,
+      appBar: showAppBar
+          ? BaseAppBar(
+              title: Text(localizations.login),
+              appBar: AppBar(),
+              showLoginButton: false,
+              leading: IconButton(
+                icon: const Icon(Icons.arrow_back),
+                onPressed: () {
+                  final navigatorProvider = NavigatorKeys.navigationDefault;
+                  final defaultContext = navigatorProvider.currentContext;
+                  if (defaultContext != null) {
+                    Navigator.of(defaultContext).pop();
+                  }
+                },
+              ),
+            )
+          : null,
       body: Center(
         child: BlocProvider(
           create: (context) => getIt<LoginBloc>(),
