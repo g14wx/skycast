@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - main
-      - SETUP-01-setup-firebase-final
 jobs:
   build:
     name: 🚀 Build Web on develop
