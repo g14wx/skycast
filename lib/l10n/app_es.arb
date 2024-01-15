@@ -44,5 +44,8 @@
   "sunset": "atardecer",
   "sunrise": "amanecer",
   "moonrise": "salida de la luna",
-  "moonset": "puesta de luna"
+  "moonset": "puesta de luna",
+  "profile": "Perfil",
+  "info": "Información",
+  "madeBy": "Hecho por"
 }

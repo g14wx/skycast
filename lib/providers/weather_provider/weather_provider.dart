@@ -5,7 +5,7 @@ import 'package:skycast/data/weather_api/models/condition_translation.dart';
 import 'package:skycast/providers/weather_provider/weather_storage_manager/protocols/i_weather_provider.dart';
 import 'package:skycast/providers/weather_provider/weather_storage_manager/protocols/i_weather_store_manager.dart';
 
-@LazySingleton(as: IWeatherProvider, env: [Env.local, Env.production, Env.staging])
+@Singleton(as: IWeatherProvider, env: [Env.local, Env.production, Env.staging])
 class WeatherProvider extends ChangeNotifier implements IWeatherProvider {
   final IWeatherStoreManager _weatherStoreManager;
 

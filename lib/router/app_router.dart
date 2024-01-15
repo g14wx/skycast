@@ -6,11 +6,10 @@ import 'package:skycast/features/root/root_home/root_home/wrapping_landing_root_
 import 'package:skycast/features/root/root_home/sub_modules/home_front/BloCs/get_weather_bloc/get_weather_bloc.dart';
 import 'package:skycast/features/root/root_home/sub_modules/home_front/landing_home_front.dart';
 import 'package:skycast/features/root/root_home/sub_modules/second_front/landing_root_home_second_front.dart';
-import 'package:skycast/features/root/root_home/sub_modules/settings_front/landing_root_home_settings.dart';
+import 'package:skycast/features/root/root_home/sub_modules/info_front/landing_root_home_settings.dart';
 import 'package:skycast/features/root/root_login/root_login/root_login_navigator.dart';
 import 'package:skycast/features/root/root_login/sub_modules/login/landing_login.dart';
 import 'package:skycast/providers/default_provider/default_provider.dart';
-import 'package:skycast/providers/weather_provider/weather_storage_manager/protocols/i_weather_provider.dart';
 
 import 'package:skycast/router/constants/app_routes.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -110,9 +109,6 @@ class AppRouter {
                   ListenableProvider(
                     create: (context) => getIt<DefaultProvider>(),
                   ),
-                  ListenableProvider(
-                    create: (context) => getIt<IWeatherProvider>(),
-                  )
                 ],
                 child: const LandingHomeFront(),
               ),
@@ -137,12 +133,12 @@ class AppRouter {
     }
   }
 
-  static Route onGenerateRouteRootHomeSettings(RouteSettings route) {
+  static Route onGenerateRouteRootHomeInfo(RouteSettings route) {
     switch (route.name) {
       case AppRoutes.root:
         return MaterialPageRoute(
           builder: (context) {
-            return const LandingRootHomeSettings();
+            return const LandingRootHomeInfo();
           },
         );
 
@@ -160,10 +156,7 @@ class AppRouter {
       case AppRoutes.root:
         return MaterialPageRoute(
           builder: (context) {
-            return MultiProvider(
-              providers: [ListenableProvider(create: (context) => getIt<DefaultProvider>())],
-              child: const LandingRootHomeSecondFront(),
-            );
+            return const LandingRootHomeSecondFront();
           },
         );
 

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart' as original_provider;
+import 'package:skycast/features/root/root_login/sub_modules/login/BloCs/login_state_bloc/login_state_bloc.dart';
 import 'package:skycast/providers/app_settings_provider/app_settings_provider.dart';
 import 'package:skycast/router/app_router.dart';
 import 'package:skycast/router/providers/navigator_keys_provider.dart';
@@ -12,6 +14,8 @@ import 'package:responsive_framework/responsive_framework.dart';
 import 'package:dynamic_color/dynamic_color.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+import 'providers/weather_provider/weather_storage_manager/protocols/i_weather_provider.dart';
+
 class App extends StatelessWidget {
   const App({super.key});
 
@@ -21,9 +25,19 @@ class App extends StatelessWidget {
         providers: [
           original_provider.ListenableProvider(create: (_) => getIt<AppSettingsProvider>()),
           original_provider.ListenableProvider(create: (_) => getIt<NavigatorKeysProvider>()),
+          original_provider.ListenableProvider(
+            create: (context) => getIt<IWeatherProvider>(),
+          )
         ],
-        child: const ProviderScope(
-          child: MyApp(),
+        child: MultiBlocProvider(
+          providers: [
+            BlocProvider(
+              create: (context) => getIt<LoginStateBloc>(),
+            )
+          ],
+          child: const ProviderScope(
+            child: MyApp(),
+          ),
         ));
   }
 }
