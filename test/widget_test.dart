@@ -9,8 +9,11 @@ import 'package:skycast/app.dart';
 import 'package:skycast/services/data_storage/protocols/i_initialization_of_data_storage_service.dart';
 import 'package:skycast/services/service_locator/service_locator_setup.dart';
 
+import 'setups/local_storage/mock_hydratate_bloc.dart';
+
 void main() {
   final binding = TestWidgetsFlutterBinding.ensureInitialized();
+  initHydratedStorage();
   binding.testTextInput.register();
   TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
       .setMockMethodCallHandler(const MethodChannel('plugins.flutter.io/path_provider'), (MethodCall methodCall) async {

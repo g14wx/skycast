@@ -20,6 +20,11 @@ class AutocompleteCustom extends HookConsumerWidget {
     return Autocomplete<String>(
       fieldViewBuilder: (context, textEditingController, focusNode, onFieldSubmitted) {
         return TextFormField(
+          onFieldSubmitted: (value) {
+            searchingWithQuery.value = textEditingController.text;
+            onSelected(searchingWithQuery.value);
+          },
+          textInputAction: TextInputAction.go,
           decoration: InputDecoration(
               hintText: translations.searchAPlace,
               hintStyle: Theme.of(context).textTheme.displayMedium?.copyWith(color: Colors.white)),
