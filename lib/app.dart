@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart' as original_provider;
@@ -32,14 +31,14 @@ class App extends StatelessWidget {
         ],
         child: MultiBlocProvider(
           providers: [
-            BlocProvider(create: (context) => getIt<LoginStateBloc>(),)
+            BlocProvider(
+              create: (context) => getIt<LoginStateBloc>(),
+            )
           ],
           child: const ProviderScope(
             child: MyApp(),
           ),
-        )
-        
-        );
+        ));
   }
 }
 
