@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      target: base
+    container_name: create-skycast-keystore
+    working_dir: /var/www/
+    volumes:
+      - ../android/app:/var/www
