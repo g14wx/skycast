@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:skycast/constants/global_app_constants.dart';
+import 'package:skycast/constants/objects_keys.dart';
 import 'package:skycast/providers/app_settings_provider/app_settings_provider.dart';
 import 'package:skycast/shared/hooks/use_app_settings_providers.dart';
 import 'package:skycast/shared/hooks/use_app_translations.dart';
@@ -21,6 +22,7 @@ class ButtonSettings extends HookConsumerWidget {
             },
             icon: Icon(!appSettingsProvider.isDarkTheme ? Icons.sunny : Icons.dark_mode)),
         PopupMenuButton<String>(
+          key: ObjectKeys.changeLanguageButtonKey,
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
               Radius.circular(20.0),
@@ -41,6 +43,7 @@ class ButtonSettings extends HookConsumerWidget {
           },
           itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
             PopupMenuItem<String>(
+              key: ObjectKeys.changeLanguageButtonSpanishKey,
               value: GlobalAppConstants.languageEs,
               child: Text("${translations.changeLanguageTo} 🇪🇸",
                   style: appSettingsProvider.language == GlobalAppConstants.languageEs
@@ -55,6 +58,7 @@ class ButtonSettings extends HookConsumerWidget {
                       : null),
             ),
             PopupMenuItem<String>(
+              key: ObjectKeys.changeLanguageButtonArabKey,
               value: GlobalAppConstants.languageAr,
               child: Text("${translations.changeLanguageTo} 🇸🇦",
                   style: appSettingsProvider.language == GlobalAppConstants.languageAr

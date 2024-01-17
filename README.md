@@ -1,11 +1,17 @@
 # skycast
 
+![img.png](assets/splash/skycast512.png)
+
 Sky Cast, to check your prefer localization weather
 
 ##  Technical information
 
 flutter version: **3.16.0 or 3.16.4**
+
+
 (optional but **recommended**) docker: **24.0.7**
+
+
 (if doesn't have docker installed) GnuPG: **latest version**
 
 ## Getting Started
@@ -25,6 +31,7 @@ brew install gnupg
 
 ###  2-) copy the env.example an name it env
 ``` bash
+
 cp env.example env
 ```
 
@@ -42,7 +49,8 @@ GOOGLE_MAPS_API_KEY= # get your google api key from the GCP of your own account
 PATH_TO_GET_SUGGESTIONS_FOR_DIRECTIONS=/maps/api/place/autocomplete/json  
 BASE_URL_TO_GET_MAP_DIRECTIONS=maps.googleapis.com
 ``` 
-###  3-) Recreate the keystore
+###  3-) Recreate the keystore 
+#### (you can skip this step, please review the "Q&A" below section)
 > :warning:  I have test this command only with linux and macos
 
 > :information_source:  Run this comman inside the root project path
@@ -56,3 +64,32 @@ gpg -d --passphrase "nikenikenike" --batch android/app/skycastApp.jks.asc > andr
 ```
 
 and then, you are good to go.
+
+## Running Test
+just run:
+```bash
+flutter test
+```
+
+# A&Q
+
+## why is needed to recreate the keystore?
+
+Due to, is the only way to use the Google sign in feature in debug mode, the sha1 signature is already registered on the Firebase console, otherwise, you must share with me your sha1 signature from the debug.keystore file in your local setup
+
+## Why if I want to skip the "3-) Recreate the keystore" step?
+You can skip it, and you have to set a variable into the **android/local.properties** file
+
+you have to add a variable called **flutter.useLocalDebugKeyStore=true** and set it to true
+
+![img.png](readme_images/skip_step_3.png)
+
+In the **android/app/build.gradle** will read that variable
+
+![img.png](readme_images/example_build_gradle_skip_step_3.png)
+
+And that's all, you can now use your local debug.keystore.
+
+> :warning: skipping the step 3, you are not allowed to test the google sign in feature.
+
+Enjoy the app!.

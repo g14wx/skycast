@@ -59,6 +59,12 @@ android {
     if (flutterMinSdkVersion == null) {
         flutterMinSdkVersion = '21'
     }
+
+    def signingWthDebugKeystore = localProperties.getProperty('flutter.useLocalDebugKeyStore')
+    if (signingWthDebugKeystore == null){
+        signingWthDebugKeystore = "false";
+    }
+
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.skycast.skycast"
@@ -80,7 +86,12 @@ android {
         }
 
         debug {
-            signingConfig signingConfigs.release
+            println("signing with local debug keystore: " + signingWthDebugKeystore)
+            if (signingWthDebugKeystore == "true"){
+                signingConfig signingConfigs.debug
+            } else {
+                signingConfig signingConfigs.release
+            }
         }
     }
 }
