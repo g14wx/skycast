@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:skycast/constants/objects_keys.dart';
 import 'package:skycast/features/root/root_home/sub_modules/home_front/BloCs/get_weather_bloc/get_weather_bloc.dart';
 import 'package:skycast/features/root/root_home/sub_modules/home_front/presentation/widgets/auto_complete_custom.dart';
 import 'package:skycast/shared/hooks/use_app_translations.dart';
@@ -47,6 +48,7 @@ class TileWeatherSeraching extends HookConsumerWidget {
           ),
         ),
         OutlinedButton(
+          key: ObjectKeys.searchLocalizationButton,
             style: ButtonStyle(
               backgroundColor: MaterialStateColor.resolveWith((states) => Colors.white),
             ),

@@ -6,6 +6,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:get_it/get_it.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:skycast/app.dart';
+import 'package:skycast/constants/objects_keys.dart';
 import 'package:skycast/services/data_storage/protocols/i_initialization_of_data_storage_service.dart';
 import 'package:skycast/services/service_locator/service_locator_setup.dart';
 
@@ -47,7 +48,42 @@ void main() {
       await tester.pumpAndSettle();
       // Then
       expect(appBarTitleHomeEnglish, findsOneWidget);
-      expect(find.text("Home"), findsOneWidget);
+      expect(find.text("Home"), findsAtLeast(1));
+      expect(find.text("Skycast"), findsOneWidget);
+
+      // check spanish text
+      // giving
+      final buttonChangeTheme = find.byKey(ObjectKeys.changeLanguageButtonKey);
+      final buttonSpanishLanguage = find.byKey(ObjectKeys.changeLanguageButtonSpanishKey);
+      // when
+      await tester.tap(buttonChangeTheme);
+      await tester.pumpAndSettle();
+      await tester.tap(buttonSpanishLanguage);
+      // then
+      await tester.pumpAndSettle();
+      expect(find.text("Inicio"), findsAtLeast(2));
+    });
+
+
+    testWidgets('Check search a location', (WidgetTester tester) async {
+      await tester.pumpWidget(const App());
+      await tester.pump();
+      await tester.pump(const Duration(seconds: 3));
+      await tester.pumpAndSettle();
+      await tester.pump(const Duration(seconds: 2));
+      // giving
+      final autocompleteTextField = find.byKey(ObjectKeys.searchLocalizationTextField);
+      final searchButton = find.byKey(ObjectKeys.searchLocalizationButton);
+      // when
+      await tester.enterText(autocompleteTextField, "Santa Ana");
+      await tester.tap(searchButton);
+      await tester.pump(const Duration(seconds: 2));
+      // Then
+      expect(find.text("Search again"), findsOneWidget);
+      expect(find.text("It will rain"), findsOneWidget);
+      expect(find.text("Region name"), findsOneWidget);
+      expect(find.text("Santa Ana"), findsOneWidget);
+      expect(find.text("It won't snow"), findsOneWidget);
     });
   });
 }
