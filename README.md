@@ -93,3 +93,5 @@ And that's all, you can now use your local debug.keystore.
 > :warning: skipping the step 3, you are not allowed to test the google sign in feature.
 
 Enjoy the app!.
+
+<!-- Security scan triggered at 2026-09-05 07:55:45 -->
