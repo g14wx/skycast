@@ -1,0 +1,10 @@
+ENV=production
+API_KEY=15c80bdf2d794617b6d35357241201
+BASE_URL_WEATHER=api.weatherapi.com
+PATH_FORECAST=/forecast.json
+PREFIX_URL_WEATHER=/v1
+PATH_FORECAST=/forecast.json
+PATH_CONDITION_TRANSLATIONS=/docs/conditions.json
+GOOGLE_MAPS_API_KEY=AIzaSyAOub6pfARq6Tr-Rc00Y9Ua9fpZnrEjnlE
+PATH_TO_GET_SUGGESTIONS_FOR_DIRECTIONS=/maps/api/place/autocomplete/json
+BASE_URL_TO_GET_MAP_DIRECTIONS=maps.googleapis.com
